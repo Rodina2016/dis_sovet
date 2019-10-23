@@ -1,0 +1,130 @@
+.header {
+  margin-bottom: 32px;
+  position: relative;
+
+  &__burger {
+    display: block;
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+
+    &-wrap {
+      position: relative;
+      width: 24px;
+      height: 2px;
+      background-color: map_get($palette, accent-main);
+      border-radius: 5px;
+
+      &::after,
+      &::before {
+        @include pseudo-element('');
+        width: 24px;
+        right: 0;
+        transition: $transition;
+
+      }
+
+      &::before {
+        top: -9px;
+        height: 2px;
+        margin-top: $grid-module*2;
+        background-color: map_get($palette, accent-main);
+        border-radius: 5px;
+      }
+
+      &::after {
+        top: -2px;
+        height: 2px;
+        margin-top: $grid-module*2;
+        background-color: map_get($palette, accent-main);
+        border-radius: 5px;
+      }
+    }
+
+    &.active {
+      height: 24px;
+      .header__burger-wrap {
+        top:10px;
+        transform: rotate(45deg);
+
+        &:after {
+          display: none;
+        }
+
+        &:before {
+          top: -16px;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}
+
+.header-logo {
+  padding: 25px 0 30px;
+
+  @include mq(md) {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+
+    &.active {
+      box-shadow: none;
+    }
+  }
+
+  @include mq(sm) {
+    padding-bottom: 16px;
+  }
+
+  @include mq(xs) {
+    padding-top: 7px;
+    padding-bottom: 10px;
+  }
+
+  &__wrap {
+    flex-wrap: nowrap;
+  }
+
+  &__logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__text {
+    line-height: 1.2;
+    font-family: map_get($font, heading-second);
+    font-weight: map_get($font, light-weight);
+    letter-spacing: 0.5px;
+
+    &-sm {
+      margin-bottom: 0;
+      font-size: 18px;
+      font-weight: map_get($font, light-weight);
+      opacity: 0.6;
+
+      @include mq(md) {
+        font-size: 16px;
+      }
+
+      @include mq(xs) {
+        display: none;
+      }
+    }
+
+    &-lg {
+      margin-bottom: 0;
+      font-size: 32px;
+
+      @include mq(md) {
+        font-size: 24px;
+      }
+
+      @include mq(xs) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 567px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

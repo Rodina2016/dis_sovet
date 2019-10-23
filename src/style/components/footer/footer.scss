@@ -1,0 +1,76 @@
+.footer-content {
+  padding: 50px 0;
+  background-color: map_get($palette, footer);
+  color: map_get($palette, bg);
+
+  @include mq(md) {
+    padding-top: 15px;
+  }
+
+  &__p {
+   margin-bottom: 7px;
+   max-width: 380px;
+
+    @include mq(md) {
+      max-width: 100%;
+    }
+
+    &--bold {
+      font-size: 14px;
+      font-weight: bold;
+
+      @include mq(md) {
+        font-weight: normal;
+      }
+    }
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    @include mq(md) {
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    &--bold {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.footer-panel {
+  color: map_get($palette, bg);
+  padding: 18px 0;
+  background-color: map_get($palette, footer-dark);
+
+  @include mq(xs) {
+    font-size: 12px;
+  }
+  &__logo {
+    height: 30px;
+    fill:map_get($palette, bg);
+
+    @include mq(md) {
+      margin-bottom: 10px;
+    }
+
+    @include mq(sm) {
+      max-width: 215px;
+    }
+  }
+
+  &__p {
+    margin-bottom: 5px;
+    font-size: 12px;
+    opacity: 0.5;
+  }
+
+  &__copyright {
+    @include mq(md) {
+      margin-top: 10px;
+    }
+  }
+}

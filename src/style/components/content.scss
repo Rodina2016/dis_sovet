@@ -1,0 +1,244 @@
+.content {
+  position: relative;
+  flex: 1;
+
+  &__block {
+    padding-top: 56px;
+    margin-bottom: 50px;
+
+    @include mq(md) {
+      padding-top: 32px;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 30px;
+    }
+
+    &-heading {
+      margin-bottom: 1rem;
+    }
+
+    &-label {
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: map_get($palette, content-light);
+    }
+
+    &-text {
+      margin-bottom: 10px;
+      padding-right: 16px;
+
+      @include mq(sm) {
+        font-size: 16px;
+      }
+
+      @include mq(xs) {
+        font-size: 14px;
+      }
+
+      &--bold {
+        font-size: 18px;
+        font-weight: map_get($font, semi-bold-weight);
+
+        @include mq(md) {
+          font-size: 18px;
+        }
+
+        @include mq(xs) {
+          font-size: 16px;
+        }
+      }
+
+      &--lg {
+        font-size: 22px;
+        font-weight: map_get($font, semi-bold-weight);
+
+        @include mq(md) {
+          font-size: 18px;
+        }
+      }
+
+      &--min-h {
+        min-height: 80px;
+
+        @include mq(md) {
+          min-height: inherit;
+        }
+      }
+
+      &--min-h-big {
+        min-height: 1110px;
+
+        @include mq(md) {
+          min-height: inherit;
+        }
+      }
+    }
+
+    &-logo {
+      max-width: 250px;
+      max-height: 25px;
+      margin-bottom: 3rem;
+
+      @include mq(xs) {
+        max-width: 180px;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+
+      @include mq(md) {
+        margin-bottom: 15px;
+      }
+
+      &--en {
+        @include mq(md) {
+          display: none;
+
+          &.hidden {
+            display: none;
+          }
+
+          &.show {
+            display: flex;
+          }
+        }
+      }
+
+      &--ru {
+        @include mq(md) {
+          &.hidden {
+            display: none;
+          }
+
+          &.show {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    &-file {
+      &:visited,
+      &:link {
+        font-size: 14px;
+        color: map_get($palette, content);
+      }
+    }
+  }
+
+  &__file {
+    &-icon {
+      position: relative;
+      top: 7px;
+      margin-right: 5px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &-size {
+      color: map_get($palette, content-light);
+    }
+
+    &-info {
+      display: block;
+      margin-top: 7px;
+      color: map_get($palette, content-light);
+    }
+  }
+
+  &__lang {
+    @include mq(md) {
+      margin-top: 24px;
+      display: block;
+
+      &-btn {
+        position: relative;
+        padding-left: 45px;
+        padding-right: 18px;
+        font-size: 18px;
+        border-color: rgba(35,36,115,.1);
+
+        &:active,
+        &:hover {
+          border-color: rgba(35,36,115,.1);
+        }
+
+        @include mq(xs) {
+          font-size: 14px;
+        }
+
+        &.hidden {
+          display: none;
+        }
+      }
+
+      &-icon {
+        position: absolute;
+        left: 8px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__col {
+
+    &-row {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &--min-h {
+        min-height: 270px;
+
+        @include mq(md) {
+          min-height: inherit;
+        }
+      }
+
+      &--border {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid map_get($palette, border-light);
+      }
+
+      &--flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      padding: $grid-module*4 $grid-module*3 $grid-module*3;
+      margin-bottom: $grid-module*4;
+      border: 2px solid map_get($palette, border-light);
+      border-radius: 20px;
+
+      @include mq(xs) {
+        padding: $grid-module*3 $grid-module*2;
+        margin-bottom: $grid-module*2;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &--bg {
+        background-color: map_get($palette, bg-dark);
+        border-color: transparent;
+      }
+
+      &--row {
+        flex-direction: row;
+      }
+    }
+  }
+}

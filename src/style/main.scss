@@ -1,0 +1,16 @@
+@import "../../node_modules/itmo-design-system/src/base/variables";
+@import "components/variables";
+@import "../../node_modules/itmo-design-system/src/base";
+@import "../fonts/fonts.css";
+
+@import "components/page";
+@import "components/content";
+
+@import "components/header-logo/header-logo";
+@import "components/header-panel/header-panel";
+@import "components/header-menu/header-menu";
+@import "components/footer/footer";
+@import "components/breadscrumbs/breadscrumbs";
+@import "components/info-block/info-block";
+@import "components/transform-block/transform-block";
+@import "components/card/card";

@@ -1,0 +1,21 @@
+.info-block {
+  padding: 15px 40px;
+  color: map_get($palette, bg);
+  background: linear-gradient(88.24deg, #3951E7 6.38%, #F21F5B 87.42%);
+  border-radius: 20px;
+  margin-bottom: 50px;
+
+  &__p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--normal {
+      font-size: 22px;
+
+      @include mq(md) {
+        font-size: 18px;
+      }
+    }
+  }
+}

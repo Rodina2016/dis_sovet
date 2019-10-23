@@ -1,0 +1,67 @@
+.card {
+  margin-bottom: $grid-module*3;
+
+  &--grow1 {
+    flex-grow: 1;
+  }
+
+  &__wrap {
+    padding: 24px;
+    background-color: map_get($palette, bg);
+    border-radius: 15px;
+    min-height: 100%;
+
+    @include mq(md) {
+      padding: 0;
+      border-radius: 0;
+
+      &--border {
+        padding-bottom: 24px;
+        border-bottom: 1px solid map_get($palette, bg-dark);
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  &__position {
+    margin-bottom: 7px;
+    font-size: 14px;
+    color: map_get($palette, content-light);
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.8;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__file {
+    display: block;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:link,
+    &:visited {
+      font-size: 14px;
+      color: map_get($palette, content);
+    }
+
+    &-svg {
+      position: relative;
+      top: 5px;
+      margin-right: 5px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

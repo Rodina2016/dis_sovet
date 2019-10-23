@@ -1,0 +1,6 @@
+$palette-new: (
+    border-light: #CFD5F9,
+);
+
+$palette: map-merge($palette, $palette-new);
+

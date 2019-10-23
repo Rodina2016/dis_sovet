@@ -1,0 +1,24 @@
+.header-panel {
+  position: relative;
+  padding: 10px 0;
+  background-color: map_get($control, bg-disabled);
+
+  &__logo {
+    height: 20px;
+
+    &-svg {
+      width: 170px;
+      height: 100%;
+    }
+  }
+
+  &__lang {
+    font-size: 12px;
+    font-weight: map_get($font, semi-bold-weight);
+    &-icon {
+      margin-left: 24px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

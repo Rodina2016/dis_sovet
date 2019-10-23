@@ -1,0 +1,83 @@
+body {
+  overflow-x: hidden;
+}
+
+a {
+  &:hover {
+    color: map_get($palette, accent-second);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5
+h6 {
+  font-family: map_get($font, heading-second);
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 40px;
+
+  @include mq(sm) {
+    font-size: 32px;
+  }
+
+  @include mq(xs) {
+    font-size: 24px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+
+  @include mq(md) {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  margin-bottom: 15px;
+
+  @include mq(md) {
+    font-size: 24px;
+  }
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.white-link {
+  &:active,
+  &:link,
+  &:visited {
+    color: map_get($palette, bg);
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 15px;
+
+  li {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.grid--col {
+  flex-direction: column;
+}
