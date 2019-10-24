@@ -1,13 +1,26 @@
 .info-block {
   padding: 15px 40px;
+  margin-top: 32px;
+  margin-bottom: 50px;
   color: map_get($palette, bg);
   background: linear-gradient(88.24deg, #3951E7 6.38%, #F21F5B 87.42%);
   border-radius: 20px;
-  margin-bottom: 50px;
+
+  @include mq(md) {
+    margin-bottom: 15px;
+  }
+
+  @include mq(xs) {
+    padding: 24px 16px;
+  }
 
   &__p {
     &:last-child {
       margin-bottom: 0;
+
+      @include mq(xs) {
+        margin-bottom: 15px;
+      }
     }
 
     &--normal {
@@ -15,6 +28,14 @@
 
       @include mq(md) {
         font-size: 18px;
+      }
+
+      @include mq(xs) {
+        font-size: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

@@ -68,9 +68,18 @@
       }
 
       &:hover {
+
         &:after {
           width: 100%;
           transition: $transition;
+
+          @include mq(md) {
+            width: 0%;
+          }
+        }
+
+        @include mq(md) {
+          color: map_get($palette, accent-main);
         }
       }
 

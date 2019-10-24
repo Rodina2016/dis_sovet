@@ -1,6 +1,7 @@
 @import "../../node_modules/itmo-design-system/src/base/variables";
 @import "components/variables";
 @import "../../node_modules/itmo-design-system/src/base";
+@import "../../node_modules/itmo-design-system/src/modules/speakers/speakers";
 @import "../fonts/fonts.css";
 
 @import "components/page";
@@ -14,3 +15,6 @@
 @import "components/info-block/info-block";
 @import "components/transform-block/transform-block";
 @import "components/card/card";
+@import "components/speakers/speakers";
+@import "components/info-card/info-card";
+@import "components/filter-tab/filter-tab";

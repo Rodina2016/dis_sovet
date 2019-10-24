@@ -1,0 +1,51 @@
+.filter-tab {
+  display: flex;
+  float: right;
+  margin-top: -60px;
+
+  &__item {
+
+    &:first-child {
+      .filter-tab__item-label {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+
+        @include mq(md) {
+          border-left: 2px solid map_get($palette, bg-dark);
+        }
+      }
+    }
+
+    &:last-child {
+      .filter-tab__item-label {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+
+    &-input {
+      display: none;
+
+      &:checked + .filter-tab__item-label {
+        background-color: map_get($palette, accent-second);
+        color: map_get($palette, bg);
+        border-color: map_get($palette, accent-second);
+      }
+    }
+
+    &-label {
+      padding: 9px 25px;
+      background-color: map_get($palette, bg);
+      border-right: 1px solid map_get($palette, bg-dark);
+      border-left: 2px solid map_get($palette, bg-dark);
+      transition: $transition;
+      cursor: pointer;
+
+      @include mq(md) {
+        border: 2px solid map_get($palette, bg-dark);
+        border-left: none;
+        font-size: 14px;
+      }
+    }
+  }
+}

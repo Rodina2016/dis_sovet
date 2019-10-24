@@ -56,6 +56,10 @@
         @include mq(md) {
           font-size: 18px;
         }
+
+        @include mq(xs) {
+          font-size: 16px;
+        }
       }
 
       &--min-h {
@@ -238,6 +242,10 @@
 
       &--row {
         flex-direction: row;
+
+        @include mq(xs) {
+          padding: 24px 0;
+        }
       }
     }
   }

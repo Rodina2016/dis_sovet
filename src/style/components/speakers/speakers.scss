@@ -1,0 +1,37 @@
+.speakers {
+  text-align: left;
+
+  .speakers {
+    &__item {
+      display: flex;
+      &-photo {
+        width: 100%;
+        max-width: 107px;
+        height: 107px;
+        margin: 0;
+        padding: 5px;
+      }
+
+      &-heading {
+        margin: 0 0 5px;
+        font-size: 16px;
+        font-family: map_get($font, body);
+        font-weight: 600;
+      }
+
+      &-info {
+        width: 100%;
+        margin-left: 15px;
+      }
+
+      &-date {
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+
+      &-position {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

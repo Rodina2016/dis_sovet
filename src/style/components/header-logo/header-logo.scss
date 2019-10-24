@@ -2,6 +2,10 @@
   margin-bottom: 32px;
   position: relative;
 
+  @include mq(xs) {
+    margin-bottom: 16px;
+  }
+
   &__burger {
     display: block;
     width: 24px;
@@ -82,6 +86,15 @@
 
   &__wrap {
     flex-wrap: nowrap;
+
+    &:link,
+    &:visited {
+      color: map_get($palette, content);
+    }
+
+    &:hover {
+      color: map_get($palette, content);
+    }
   }
 
   &__logo {

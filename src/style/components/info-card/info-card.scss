@@ -1,0 +1,119 @@
+.info-card {
+  &__item {
+    display: block;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:visited,
+    &:link {
+      color: map_get($palette, content);
+    }
+
+    &:hover {
+      .info-card__item-wrap {
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+      }
+
+      .info-card__item-icon {
+        transition: $transition;
+        &:after {
+          width: 25px;
+
+          @include mq(md) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-wrap {
+      padding: 32px;
+      background-color: map_get($palette, bg);
+      box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.06);
+      border-radius: 20px;
+      transition: $transition;
+    }
+
+    &-icon {
+      position: relative;
+      display: inline-block;
+      height: 20px;
+      transition: $transition;
+
+      &:after {
+        @include pseudo-element('');
+        top: 9px;
+        right: 29px;
+        width: 0;
+        height: 2px;
+        background-color: map_get($palette, accent-main);
+        transition: $transition;
+      }
+    }
+
+    &-svg {
+      position: relative;
+      width: 30px;
+      height: 20px;
+      fill: map_get($palette, accent-main);
+      transition: $transition;
+
+      @include mq(md) {
+        width: 10px;
+      }
+    }
+
+    &-name {
+      margin-bottom: 16px;
+      font-weight: 600;
+      font-size: 22px;
+
+      @include mq(md) {
+        font-size: 18px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 13px;
+
+      @include mq(md) {
+        font-size: 14px;
+      }
+    }
+
+    &-heading {
+      font-weight: 600;
+
+      @include mq(md) {
+        font-size: 14px;
+      }
+    }
+
+    &-label {
+      display: inline-block;
+      padding: 9px 16px;
+      margin-bottom: 12px ;
+      font-size: 14px;
+      background: map_get($palette, bg-dark);
+      border-radius: 2px;
+      color: map_get($palette, content-light);
+    }
+
+    &-date {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: map_get($palette, content-light);
+
+      @include mq(md) {
+        font-size: 12px;
+      }
+
+      &--sovet {
+        color: map_get($palette, content);
+      }
+    }
+  }
+}

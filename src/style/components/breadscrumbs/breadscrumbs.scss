@@ -2,4 +2,10 @@
   margin-bottom: 56px;
   color: map_get($palette, content-light);
   font-size: 14px;
+
+  @include mq(xs) {
+    margin-bottom: 32px;
+    font-size: 10px;
+    line-height: 16px;
+  }
 }

@@ -20,6 +20,20 @@
         border-bottom: 1px solid map_get($palette, bg-dark);
       }
     }
+
+    @include mq(xs) {
+      padding-bottom: 24px;
+      border-bottom: 1px solid map_get($palette, bg-dark);
+    }
+  }
+
+  @include mq(xs) {
+    &:last-child {
+      .card__wrap {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
   }
 
   &__heading {
