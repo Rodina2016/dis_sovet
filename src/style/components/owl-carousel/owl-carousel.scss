@@ -1,0 +1,39 @@
+.owl-carousel {
+  .owl-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .owl-dot {
+      width: 8px;
+      height: 8px;
+      margin: 0 10px;
+      border-radius: 50%;
+      background-color: rgba(57, 81, 227, 0.4);
+
+      &.active {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        margin: 0 6px;
+        background-color: map_get($palette, bg);
+        border: 1px solid map_get($palette, accent-main-light);
+
+        &:after {
+          @include pseudo-element('');
+          width: 8px;
+          height: 8px;
+          top: 3px;
+          right: 3px;
+          border-radius: 50%;
+          background-color: map_get($palette, accent-main);
+        }
+      }
+    }
+  }
+
+  &.owl-loaded {
+    @include mq(sm) {
+      margin: 0;
+    }
+  }
+}

@@ -1,17 +1,27 @@
 .filter-tab {
   display: flex;
   float: right;
-  margin-top: -60px;
+  margin-top: -70px;
+
+  @include mq(sm) {
+    margin-top: 0;
+    margin-bottom: 40px;
+    float: none;
+  }
+
+  @include mq(xs) {
+    margin-bottom: 30px;
+  }
 
   &__item {
-
     &:first-child {
       .filter-tab__item-label {
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
+        border-left: none;
 
         @include mq(md) {
-          border-left: 2px solid map_get($palette, bg-dark);
+          border-left: 1px solid map_get($palette, bg-dark);
         }
       }
     }
@@ -20,6 +30,11 @@
       .filter-tab__item-label {
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
+        border-right: none;
+
+        @include mq(md) {
+          border-right: 1px solid map_get($palette, bg-dark);
+        }
       }
     }
 
@@ -29,20 +44,23 @@
       &:checked + .filter-tab__item-label {
         background-color: map_get($palette, accent-second);
         color: map_get($palette, bg);
-        border-color: map_get($palette, accent-second);
       }
     }
 
     &-label {
-      padding: 9px 25px;
+      display: block;
+      padding: 8px 16px;
+      min-width: 70px;
+      text-align: center;
       background-color: map_get($palette, bg);
       border-right: 1px solid map_get($palette, bg-dark);
-      border-left: 2px solid map_get($palette, bg-dark);
+      border-left: 1px solid map_get($palette, bg-dark);
       transition: $transition;
       cursor: pointer;
+      line-height: 22px;
 
       @include mq(md) {
-        border: 2px solid map_get($palette, bg-dark);
+        border: 1px solid map_get($palette, bg-dark);
         border-left: none;
         font-size: 14px;
       }

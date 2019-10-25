@@ -1,4 +1,5 @@
 .info-card {
+  padding-bottom: 80px;
   &__item {
     display: block;
     margin-bottom: 32px;
@@ -15,6 +16,10 @@
     &:hover {
       .info-card__item-wrap {
         box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+      }
+
+      .info-card__item-name {
+        color: map_get($palette, accent-main);
       }
 
       .info-card__item-icon {
@@ -35,6 +40,14 @@
       box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.06);
       border-radius: 20px;
       transition: $transition;
+
+      @include mq(sm) {
+        padding: 24px;
+      }
+
+      @include mq(xs) {
+        padding: 16px;
+      }
     }
 
     &-icon {
@@ -100,6 +113,15 @@
       background: map_get($palette, bg-dark);
       border-radius: 2px;
       color: map_get($palette, content-light);
+
+      @include mq(sm) {
+        align-self: baseline;
+        margin-right: 24px;
+      }
+
+      @include mq(xs) {
+        margin-right: 0;
+      }
     }
 
     &-date {
@@ -113,6 +135,30 @@
 
       &--sovet {
         color: map_get($palette, content);
+      }
+    }
+
+    &-descr {
+      @include mq(sm) {
+        margin-bottom: 24px;
+      }
+
+      @include mq(xs) {
+        position: relative;
+        margin-bottom: 48px;
+        &:after {
+          @include pseudo-element('');
+          bottom: -24px;
+          width: calc(100% - 32px);
+          height: 1px;
+          background-color: map_get($palette, bg-dark);
+        }
+      }
+    }
+
+    &-link {
+      @include mq(xs) {
+        margin: 15px 0 0 0;
       }
     }
   }

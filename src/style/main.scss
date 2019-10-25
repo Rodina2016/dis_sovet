@@ -4,6 +4,8 @@
 @import "../../node_modules/itmo-design-system/src/modules/speakers/speakers";
 @import "../fonts/fonts.css";
 
+@import 'owl.carousel.css';
+
 @import "components/page";
 @import "components/content";
 
@@ -18,3 +20,4 @@
 @import "components/speakers/speakers";
 @import "components/info-card/info-card";
 @import "components/filter-tab/filter-tab";
+@import "components/owl-carousel/owl-carousel";

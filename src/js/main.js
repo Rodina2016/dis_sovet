@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
    const burger = document.querySelector('#burger');
    const headerMenu = document.querySelector('#header-menu');
    const headerLogo = document.querySelector('#header-logo');
+   const $speackersCarousel = $('.speakers-carousel');
 
    if(langBtn) {
        langBtn.addEventListener('click', function () {
@@ -32,16 +33,33 @@ document.addEventListener('DOMContentLoaded', function () {
        });
    }
 
-    burger.addEventListener('click', function () {
+   if(burger) {
+       burger.addEventListener('click', function () {
 
-        if(this.classList.contains('active')) {
-            this.classList.remove('active');
-            headerMenu.classList.remove('active');
-            headerLogo.classList.remove('active');
-        } else {
-            this.classList.add('active');
-            headerMenu.classList.add('active');
-            headerLogo.classList.add('active');
-        }
+           if(this.classList.contains('active')) {
+               this.classList.remove('active');
+               headerMenu.classList.remove('active');
+               headerLogo.classList.remove('active');
+           } else {
+               this.classList.add('active');
+               headerMenu.classList.add('active');
+               headerLogo.classList.add('active');
+           }
+       });
+   }
+
+if(window.innerWidth < 991) {
+    $speackersCarousel.owlCarousel({
+        responsive: {
+            768: {
+                items: 2,
+            },
+            0: {
+                items: 1
+            }
+        },
     });
+}
+
+
 });
