@@ -96,3 +96,26 @@ ul {
     margin-bottom: 7px;
   }
 }
+
+.mb-80 {
+  margin-bottom: 80px;
+
+  @include mq(md) {
+    margin-bottom: 56px;
+  }
+
+  @include mq(xs) {
+    margin-bottom: 48px;
+  }
+}
+
+.vw-100 {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+
+  &--bg {
+    @include mq(md) {
+      background-color: map_get($palette, bg-dark);
+    }
+  }
+}

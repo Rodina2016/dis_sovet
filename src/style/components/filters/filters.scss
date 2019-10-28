@@ -1,0 +1,89 @@
+.filters {
+
+    & + .info-card {
+      @include mq(md) {
+        margin-top: 56px;
+      }
+
+      @include mq(sm) {
+        margin-top: 32px;
+      }
+    }
+
+
+  &__col {
+    padding-right: 16px;
+
+    @include mq(sm) {
+      padding: 0;
+    }
+
+    &--pr0 {
+      padding-right: 0;
+
+      @include mq(md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .icon-calendar {
+
+    @include mq(xs) {
+      display: none;
+    }
+
+    &:before {
+      position: relative;
+      top:-4px;
+      right: -3px;
+      font-size: 14px;
+    }
+  }
+
+  .datepicker input {
+    padding-right: 30px;
+  }
+
+  &__btns {
+    padding-top: 23px;
+
+    @include mq(sm) {
+      padding-top: 5px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &__btn {
+    margin: 0 8px;
+  }
+
+  .filters__btn--border {
+    background-color: transparent;
+  }
+
+ &__close {
+   padding-top: 25px;
+   padding-bottom: 25px;
+   margin-bottom: 15px;
+
+   @include mq(xs) {
+     padding-top: 20px;
+     padding-bottom: 20px;
+   }
+
+   &-btn {
+     display: flex;
+     align-items: center;
+     width: 115px;
+     margin: 0 auto;
+     font-size: 14px;
+   }
+
+   &-icon {
+     width: 24px;
+     height: 16px;
+     margin-right: 8px;
+   }
+ }
+}

@@ -4,7 +4,9 @@
 @import "../../node_modules/itmo-design-system/src/modules/speakers/speakers";
 @import "../fonts/fonts.css";
 
-@import 'owl.carousel.css';
+@import 'owl.carousel.min.css';
+@import 'select2.min.css';
+@import 'bootstrap-datetimepicker.min.css';
 
 @import "components/page";
 @import "components/content";
@@ -21,3 +23,5 @@
 @import "components/info-card/info-card";
 @import "components/filter-tab/filter-tab";
 @import "components/owl-carousel/owl-carousel";
+@import "components/sort/sort";
+@import "components/filters/filters";

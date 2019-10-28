@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+//= template/partials/head.html
+<body>
+<div class="layout">
+    //= template/partials/svg-sprite.html
+    //= template/partials/header.html
+    <div class="content">
+        <div class="wrapper">
+            //= template/partials/breadscrumbs.html
+            <h1>Объявления о защитах</h1>
+            <div class="form-group sort">
+                    <label class="sort__label">Сортировать по фамилии</label>
+                <div class="sort__select">
+                    <select data-placeholder="Выбрать вариант">
+                        <option>А — Я</option>
+                        <option>Я — А</option>
+                    </select>
+                </div>
+            </div>
+            <div class="vw-100 vw-100--bg filters">
+                <div class="filters__close hidden-lg visible-md">
+                    <div class="filters__close-btn">
+                        <svg class="filters__close-icon">
+                            <use xlink:href="#filter"></use>
+                        </svg>
+                        Фильтры
+                    </div>
+                </div>
+                <div class="wrapper filters__wrap">
+                    <form action="" class="grid ungutter">
+                        <div class="lg-2 md-4 sm-12 filters__col">
+                            <div class="form-group">
+                                <label>Диссертационный совет</label>
+                                <select data-placeholder="Выберите номер">
+                                    <option></option>
+                                    <option>Летние стажировки</option>
+                                    <option>Зимние стажировки</option>
+                                    <option>Гранты</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="lg-4 md-4 sm-12 filters__col">
+                            <div class="form-group">
+                                <label>Специальность</label>
+                                <select data-placeholder="Выберите специальность">
+                                    <option></option>
+                                    <option>Летние стажировки</option>
+                                    <option>Зимние стажировки</option>
+                                    <option>Гранты</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="lg-3 md-4 sm-12 filters__col">
+                            <div class="form-group">
+                                <label>Поиск по фамилии</label>
+                                <input type="text" placeholder="Введите фамилию"/>
+                            </div>
+                        </div>
+                        <div class="lg-3 md-4 sm-8 xs-12 filters__col filters__col--pr0 form-group">
+                            <div class="grid">
+                                <div class="cell">
+                                    <label>Дата защиты</label>
+                                </div>
+                                <div class="cell lg-6">
+                                    <div class="form-group">
+                                        <div class='input-group datepicker date-range date-start' data-date-id="date1">
+                                            <input type='text' placeholder="дд / мм / гггг"/>
+                                            <span class="input-group-addon">
+                            <span class="icon-calendar"></span>
+                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell lg-6">
+                                    <div class="form-group">
+                                        <div class='input-group datepicker date-range date-end' data-date-id="date1">
+                                            <input type='text' class="form-control" placeholder="дд / мм / гггг"/>
+                                            <span class="input-group-addon">
+                            <span class="icon-calendar"></span>
+                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg-4 sm-12 filters__col filters__btns hidden-lg visible-md center-lg">
+                            <button class="button button-blue button-rounded button-bordered filters__btn filters__btn--border">
+                                Отменить
+                            </button>
+                            <button class="button button-blue button-rounded filters__btn">
+                                Показать
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="info-card">
+                <a href="#" class="info-card__item">
+                    <div class="info-card__item-wrap">
+                        <div class="grid">
+                            <div class="cell lg-8 md-7 sm-12 info-card__item-descr">
+                                <div class="info-card__item-name">
+                                    Чугина Юлия Владимировна
+                                </div>
+                                <div class="info-card__item-title">
+                                    05.13.12 Системы автоматизации проектирования (технические науки)
+                                </div>
+                                <div class="info-card__item-heading">
+                                    Исследование структуры сингулярных пучков с полуцелыми топологическими зарядами
+                                    в оптически неоднородных и анизотропных средах
+                                </div>
+                            </div>
+                            <div class="cell lg-3 md-4 sm-10 xs-12 end-lg start-sm center-xs grid ungutter">
+                                <div class="info-card__item-label">
+                                    Кандидатская
+                                </div>
+                                <div class="lg-12 sm-8 xs-12">
+                                    <div class="info-card__item-date info-card__item-date--sovet">
+                                        Диссертационный совет 01.18.00
+                                    </div>
+                                    <div class="info-card__item-date">
+                                        Дата размещения: 26.09.2019
+                                    </div>
+                                    <div class="info-card__item-date">
+                                        Дата защиты: 15.11.2019
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell lg-1 sm-2 md-1 xs-12 middle-lg end-lg center-xs grid info-card__item-link">
+                                <div class="info-card__item-icon">
+                                    <svg class="info-card__item-svg hidden-md">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                    <svg class="info-card__item-svg hidden-lg visible-md">
+                                        <use xlink:href="#icon-arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="info-card__item">
+                    <div class="info-card__item-wrap">
+                        <div class="grid">
+                            <div class="cell lg-8 md-7 sm-12 info-card__item-descr">
+                                <div class="info-card__item-name">
+                                    Чугина Юлия Владимировна
+                                </div>
+                                <div class="info-card__item-title">
+                                    05.13.12 Системы автоматизации проектирования (технические науки)
+                                </div>
+                                <div class="info-card__item-heading">
+                                    Исследование структуры сингулярных пучков с полуцелыми топологическими зарядами
+                                    в оптически неоднородных и анизотропных средах
+                                </div>
+                            </div>
+                            <div class="cell lg-3 md-4 sm-10 xs-12 end-lg start-sm center-xs grid ungutter">
+                                <div class="info-card__item-label">
+                                    Кандидатская
+                                </div>
+                                <div class="lg-12 sm-8 xs-12">
+                                    <div class="info-card__item-date info-card__item-date--sovet">
+                                        Диссертационный совет 01.18.00
+                                    </div>
+                                    <div class="info-card__item-date">
+                                        Дата размещения: 26.09.2019
+                                    </div>
+                                    <div class="info-card__item-date">
+                                        Дата защиты: 15.11.2019
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell lg-1 sm-2 md-1 xs-12 middle-lg end-lg center-xs grid info-card__item-link">
+                                <div class="info-card__item-icon">
+                                    <svg class="info-card__item-svg hidden-md">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                    <svg class="info-card__item-svg hidden-lg visible-md">
+                                        <use xlink:href="#icon-arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="info-card__item">
+                    <div class="info-card__item-wrap">
+                        <div class="grid">
+                            <div class="cell lg-8 md-7 sm-12 info-card__item-descr">
+                                <div class="info-card__item-name">
+                                    Чугина Юлия Владимировна
+                                </div>
+                                <div class="info-card__item-title">
+                                    05.13.12 Системы автоматизации проектирования (технические науки)
+                                </div>
+                                <div class="info-card__item-heading">
+                                    Исследование структуры сингулярных пучков с полуцелыми топологическими зарядами
+                                    в оптически неоднородных и анизотропных средах
+                                </div>
+                            </div>
+                            <div class="cell lg-3 md-4 sm-10 xs-12 end-lg start-sm center-xs grid ungutter">
+                                <div class="info-card__item-label">
+                                    Кандидатская
+                                </div>
+                                <div class="lg-12 sm-8 xs-12">
+                                    <div class="info-card__item-date info-card__item-date--sovet">
+                                        Диссертационный совет 01.18.00
+                                    </div>
+                                    <div class="info-card__item-date">
+                                        Дата размещения: 26.09.2019
+                                    </div>
+                                    <div class="info-card__item-date">
+                                        Дата защиты: 15.11.2019
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell lg-1 sm-2 md-1 xs-12 middle-lg end-lg center-xs grid info-card__item-link">
+                                <div class="info-card__item-icon">
+                                    <svg class="info-card__item-svg hidden-md">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                    <svg class="info-card__item-svg hidden-lg visible-md">
+                                        <use xlink:href="#icon-arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="grid">
+                    <div class="lg-12 center-lg">
+                        <button id="load-announces" class="button button-blue button-rounded button-bordered button-icon-right info-card__btn">
+                            Показать еще
+                            <i class="icon-corner-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    //= template/partials/footer.html
+</div>
+</body>
+</html>

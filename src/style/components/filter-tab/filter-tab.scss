@@ -1,7 +1,7 @@
 .filter-tab {
   display: flex;
   float: right;
-  margin-top: -70px;
+  margin-top: -65px;
 
   @include mq(sm) {
     margin-top: 0;

@@ -2,8 +2,12 @@
   text-align: left;
   margin-bottom: 50px;
 
-  @include mq(sm) {
-    margin-bottom: 80px;
+  @include mq(md) {
+    margin-bottom: 0px;
+  }
+
+  @include mq(xs) {
+    margin-top: 48px;
   }
 
   .speakers {
@@ -36,6 +40,12 @@
 
       &-position {
         margin-bottom: 5px;
+      }
+    }
+
+    &__col {
+      @include mq(sm) {
+        padding: 0;
       }
     }
   }

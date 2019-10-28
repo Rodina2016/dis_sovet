@@ -1,0 +1,23 @@
+.sort {
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-top: -85px;
+
+  @include mq(sm) {
+    float: none;
+    margin-top: 0;
+  }
+
+  .sort {
+    &__label {
+      display: inline-block;
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+
+    &__select {
+      width: 92px;
+    }
+  }
+}
