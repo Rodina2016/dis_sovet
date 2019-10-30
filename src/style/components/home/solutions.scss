@@ -1,0 +1,31 @@
+.solutions {
+  position: relative;
+  min-height: 500px;
+  padding-bottom: 340px;
+  color: map_get($palette, bg);
+
+  &__bg{
+    position: absolute;
+    left: -210px;
+    top: -180px;
+    height: 100%;
+    width: 100%;
+    background-color: map_get($palette, content);
+    border-bottom-right-radius: 180px;
+    transform: rotate(3deg);
+    z-index: -2;
+  }
+
+  &__text {
+    max-width: 800px;
+  }
+
+  &__icon {
+    margin-top: 77px;
+
+    &-text {
+      max-width: 240px;
+      margin: 16px auto;
+    }
+  }
+}

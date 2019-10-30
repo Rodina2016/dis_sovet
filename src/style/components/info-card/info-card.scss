@@ -105,6 +105,25 @@
       }
     }
 
+    &-count {
+      position: absolute;
+      top: 5px;
+      left: 92%;
+      width: fit-content;
+      font-size: 14px;
+      color: map_get($palette, content-light);
+
+      @include mq(md) {
+        left: inherit;
+        right: 0;
+      }
+
+      @include mq(sm) {
+        font-size: 12px;
+        right: 16px;
+      }
+    }
+
     &-label {
       display: inline-block;
       padding: 9px 16px;
@@ -139,6 +158,8 @@
     }
 
     &-descr {
+      position: relative;
+
       @include mq(sm) {
         margin-bottom: 24px;
       }
@@ -153,6 +174,13 @@
           height: 1px;
           background-color: map_get($palette, bg-dark);
         }
+
+        &--noborder {
+          margin-bottom: 0;
+          &:after {
+            display: none;
+          }
+        }
       }
     }
 
@@ -165,5 +193,42 @@
 
   &__btn {
     margin-top: 48px;
+  }
+
+  &__person {
+    margin-top: 24px;
+    font-size: 14px;
+
+    @include mq(sm) {
+      padding: 16px 0;
+      font-size: 12px;
+      border-top: 1px solid map_get($palette, bg-dark);
+      border-bottom: 1px solid map_get($palette, bg-dark);
+    }
+
+    &-name {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    &-position {
+      margin-bottom: 5px;
+      color: map_get($palette, content-light);
+    }
+
+    &-col {
+      padding-right: 32px;
+      &:last-child {
+        padding-right: 0;
+      }
+
+      @include mq(xs) {
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }

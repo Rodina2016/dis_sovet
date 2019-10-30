@@ -2,6 +2,17 @@
   position: relative;
   flex: 1;
 
+  &-main {
+    position: relative;
+    margin-top: -32px;
+    background-color: map_get($palette, accent-main);
+    z-index: -1;
+  }
+
+  &__mb {
+    margin-bottom: 80px;
+  }
+
   &__block {
     padding-top: 56px;
     margin-bottom: 50px;
@@ -126,6 +137,13 @@
     }
 
     &-file {
+      display: block;
+      margin-bottom: 16px;
+
+      &--mb0 {
+        margin-bottom: 0;
+      }
+
       &:visited,
       &:link {
         font-size: 14px;

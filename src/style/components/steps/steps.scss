@@ -1,0 +1,173 @@
+.steps {
+  max-width: 850px;
+  counter-reset: steps-item-count -1; // Счетчик для псевдоэлементов. в этой строке мы его обнуляем
+  .steps__heading {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .steps__item {
+    position: relative;
+    margin: 0 0 $grid-module $gutter / 2;
+    background-color: #{map_get($palette, bg-dark)};
+    border-radius: $grid-module;
+    transition: $transition;
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+    &::after {
+      @include pseudo-element('');
+    }
+    &::after {
+      width: 0;
+      left: -1px;
+      top: 3rem;
+      bottom: -3rem;
+      border-left: 3px dashed #{map_get($palette, accent-main)};
+      background: #{map_get($palette, bg)};
+      z-index: z(pseudo-back);
+    }
+    &.is-active {
+      background: transparent;
+      &::before {
+        background-color: #{map_get($palette, accent-second)};
+      }
+      .steps__item-head {
+        &::before {
+          color: #{map_get($palette, accent-second)};
+          transform: rotate(270deg);
+        }
+        &::after {
+          background-color: #{map_get($palette, accent-second)};
+        }
+        &:hover {
+          &::before {
+            color: #{map-get($palette, accent-second)};
+          }
+        }
+      }
+    }
+  }
+  .steps__item-head {
+    position: relative;
+    padding: 1rem $gutter * 2 1rem 3rem;
+    cursor: pointer;
+    transition: $transition;
+    @extend .icon-arrow;
+    &:hover {
+      &::after {
+        background: #{map-get($palette, accent-second)};
+      }
+      &::before {
+        color: #{map-get($palette, accent-second)};
+      }
+    }
+    &::after {
+      @include pseudo-element('');
+      counter-increment: steps-item-count; // инкремируем счетчик
+      content: counter(steps-item-count); // подставляем значение
+      top: 1rem;
+      left: $gutter * 1.5 / -2;
+      width: $gutter * 1.5;
+      height: $gutter * 1.5;
+      font-weight: #{map_get($font, bold-weight)};
+      font-size: 1.2rem;
+      line-height: $gutter * 1.25;
+      text-align: center;
+      transform: translateY(-10px);
+      color: #{map_get($palette, bg)};
+      background: #{map_get($palette, accent-main)};
+      border: 4px solid #{map_get($palette, bg)};
+      border-radius: 50%;
+      box-shadow: 0 4px 8px 0 rgba(0, 120, 215, 0.5);
+      z-index: z(pseudo);
+      transition: $transition;
+      @include mq(xs) {
+        left: $gutter * 1.25 / -2;
+        width: $gutter * 1.25;
+        height: $gutter * 1.25;
+        line-height: $gutter * 1;
+      }
+    }
+    &::before {
+      position: absolute;
+      top: calc(50% - 8px);
+      right: 1.5rem;
+      font-family: 'Icons';
+      font-size: 16px;
+      line-height: 1;
+      color: #{map-get($palette, accent-main)};
+      transform: rotate(90deg);
+      transition: $transition;
+      @include mq(xs) {
+        right: 1rem;
+      }
+    }
+  }
+  .steps__item-heading {
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.5;
+    @include mq(xs) {
+      line-height: 1.5rem;
+    }
+  }
+  .steps__item-description {
+    font-size: #{map_get($font-size, xs)};
+    margin-bottom: 0;
+    @include mq(xs) {
+      line-height: 1.5rem;
+    }
+  }
+  .steps__item-body {
+    display: none;
+    padding: 0 1rem 1rem 3rem;
+  }
+  .steps__taglist { // список тэгов
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  .steps__taglist-item {
+    display: block;
+    margin-right: 1rem;
+    &::before {
+      display: none;
+    }
+  }
+  .steps__taglist-link {
+    display: block;
+    padding: $grid-module;
+    color: #{map_get($palette, accent-main)};
+    background-color: #{map_get($palette, bg-dark)};
+    line-height: 1rem;
+    transition: $transition;
+    &:hover {
+      background-color: darken(map_get($palette, bg-dark), 10);
+    }
+  }
+  .steps__button {
+    position: relative;
+    padding-right: $gutter + $grid-module;
+    margin-top: 1rem;
+    @extend .icon-arrow;
+    &::before {
+      position: absolute;
+      top: 11px;
+      right: $grid-module * 2;
+      width: $grid-module * 2;
+      height: $grid-module * 2;
+      font-family: 'Icons';
+      line-height: $grid-module * 2;
+      text-align: center;
+      transform: rotate(90deg);
+    }
+    &.is-show {
+      &::before {
+        transform: rotate(270deg);
+      }
+    }
+  }
+}

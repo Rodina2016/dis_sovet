@@ -1,0 +1,49 @@
+.tabs {
+  position: relative;
+  display: block;
+  padding-left: 0;
+  max-width: inherit;
+  &__item {
+    display: inline-block;
+    margin-right: 32px;
+    margin-bottom: 0;
+    color: map_get($palette, accent-second);
+    font-family: #{map_get($font, body)};
+    &:before {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background: map_get($palette, accent-second);
+      border-radius: 0;
+      transition: $transition;
+      z-index: z(pseudo);
+      border-radius: 20px;
+    }
+    &.active {
+      &:before {
+        width: 100%;
+      }
+
+      .tabs__item-link {
+        transition: $transition;
+        color: map_get($palette, accent-second);
+      }
+    }
+    &-link {
+      display: block;
+      line-height: 24px;
+      padding: 8px 0;
+      font-weight: 600;
+    }
+  }
+}
+
+.tab-content {
+  display: none;
+  &.active {
+    display: block;
+  }
+}

@@ -1,0 +1,37 @@
+.stat {
+  position: relative;
+  min-height: 500px;
+  padding-top: 110px;
+  padding-bottom: 170px;
+
+  &__bg {
+    position: absolute;
+    left: -60px;
+    top: -100px;
+    height: 100%;
+    width: 100%;
+    background-color: map_get($palette, bg);
+    border-bottom-right-radius: 180px;
+    transform: rotate(3deg);
+    z-index: -1;
+  }
+
+  &__text {
+    max-width: 904px;
+  }
+
+  &__item {
+    &-num {
+      font-family: map_get($font, heading-second);
+      font-size: 56px;
+      line-height: 1.5;
+      letter-spacing: -0.05em;
+    }
+
+    &-text {
+      font-size: 16px;
+      line-height: 1.5;
+      color: map_get($palette, content-light);
+    }
+  }
+}

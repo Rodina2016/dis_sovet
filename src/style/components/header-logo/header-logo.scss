@@ -1,6 +1,7 @@
 .header {
   margin-bottom: 32px;
   position: relative;
+  background-color: map_get($palette, bg);
 
   @include mq(xs) {
     margin-bottom: 16px;

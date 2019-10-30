@@ -20,6 +20,11 @@ h6 {
 
 h1 {
   font-size: 40px;
+  margin-bottom: 33px;
+
+  @include mq(md) {
+    margin-bottom: 25px;
+  }
 
   @include mq(sm) {
     font-size: 32px;
@@ -94,6 +99,18 @@ ol {
 ul {
   li {
     margin-bottom: 7px;
+  }
+}
+
+ol ul {
+  list-style: none;
+
+  li::before {
+    @include pseudo-element('');
+    width: $grid-module / 2;
+    height: $grid-module / 2;
+    left: -.75rem;
+    top: .65rem;
   }
 }
 

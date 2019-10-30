@@ -10,6 +10,14 @@
     margin-top: 48px;
   }
 
+  &--contacts {
+    margin-top: 38px;
+
+    @include mq(md) {
+      margin-bottom: 50px;
+    }
+  }
+
   .speakers {
     &__item {
       display: flex;

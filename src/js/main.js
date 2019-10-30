@@ -123,5 +123,96 @@ document.addEventListener('DOMContentLoaded', function () {
         $(this).next('.filters__wrap').slideToggle();
     });
 
+    /*tabs*/
+
+    $('.tabs__item-link').click(function(e) {
+        e.preventDefault();
+        var tab = $(this).closest('.tabs__item');
+        var tabTarget = $(tab).attr('data-tab');
+        if (!tab.hasClass('active')) {
+            $(tab)
+                .siblings('.tabs__item.active')
+                .removeClass('active');
+            $(tab).addClass('active');
+            $('#' + tabTarget)
+                .siblings('.tab-content')
+                .hide();
+            $('#' + tabTarget).fadeIn();
+        }
+    });
+    $('.tabs').each(function(i, item) {
+        $(item)
+            .find('.tabs__item')
+            .first()
+            .addClass('active');
+        $(item)
+            .next()
+            .addClass('active');
+    });
+
+    /*steps*/
+
+    var Steps = {
+        item: '.steps__item',
+        head: $('.steps__item-head'),
+        body: '.steps__item-body',
+        btn: $('.steps__button')
+    };
+
+    var toggleButtonText = function(button) {
+        var newTextContent = button.attr('data-text');
+        button.attr('data-text', button.text());
+        button.text(newTextContent);
+
+        button.toggleClass('is-show');
+    };
+
+    var onStepsHeadClick = function() {
+        var $this = $(this);
+        var stepsBtn = $this.closest('.steps').find(Steps.btn);
+        var stepsItem = $this.parent(Steps.item);
+
+        if (stepsItem.hasClass('is-active')) {
+            stepsItem.removeClass('is-active');
+            $this.siblings(Steps.body).slideUp();
+            if ($(stepsBtn).hasClass('is-show')) {
+                toggleButtonText(stepsBtn);
+            }
+        } else {
+            var activeSteps = stepsItem.siblings('.is-active').length;
+            var steps = stepsItem.siblings(stepsItem).length;
+            stepsItem.addClass('is-active');
+            $this.siblings(Steps.body).slideDown();
+            if (activeSteps === steps) {
+                toggleButtonText(stepsBtn);
+            }
+        }
+    };
+    Steps.head.on('click', onStepsHeadClick);
+
+    var onStepsBtnClick = function() {
+        var $this = $(this);
+        var closestStepsItem = $this.closest('.steps').find(Steps.item);
+
+        if ($this.hasClass('is-show')) {
+            closestStepsItem.removeClass('is-active');
+            closestStepsItem
+                .children(Steps.body)
+                .stop()
+                .slideUp();
+        } else {
+            closestStepsItem.addClass('is-active');
+            closestStepsItem
+                .children(Steps.body)
+                .stop()
+                .slideDown();
+        }
+
+        toggleButtonText($this);
+
+        $this.blur();
+    };
+    Steps.btn.on('click', onStepsBtnClick);
+
 
 });

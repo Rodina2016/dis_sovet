@@ -8,7 +8,7 @@
     width: 100%;
     right: 0;
     background-color: map_get($palette, bg);
-    z-index: 1;
+    z-index: 4;
   }
 
   &__nav {
