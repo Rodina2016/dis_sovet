@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
          headerLogo = document.querySelector('#header-logo'),
          $textRu = $('#text-ru').text(),
          $textEn = $('#text-en').text(),
-         $speackersCarousel = $('.speakers-carousel');
+         $speackersCarousel = $('.speakers-carousel'),
+         $eventsCarousel = $('#events-carousel');
 
    if(langBtn) {
        langBtn.addEventListener('click', function () {
@@ -63,12 +64,27 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    if(window.innerWidth < 1280) {
+        $eventsCarousel.owlCarousel({
+            responsive: {
+                1280: {
+                    items: 2,
+                },
+                768: {
+                    items: 2,
+                },
+                0: {
+                    items: 1
+                }
+            },
+        });
+    }
+
     $('select').select2({
         minimumResultsForSearch: -1
     });
 
     $('.filters__wrap').addClass('hidden-md');
-
 
     $('.datepicker').datetimepicker({
         format: 'DD / MM / YYYY',

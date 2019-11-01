@@ -33,6 +33,22 @@ h1 {
   @include mq(xs) {
     font-size: 24px;
   }
+
+  &.main-heading {
+    font-size: 56px;
+
+    @include mq(md) {
+      font-size: 48px;
+    }
+    @include mq(sm) {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    @include mq(xs) {
+      font-size: 24px;
+    }
+  }
 }
 
 h2 {
@@ -135,4 +151,15 @@ ol ul {
       background-color: map_get($palette, bg-dark);
     }
   }
+}
+
+img {
+  max-width: 100%;
+}
+
+.sm-order-1 {
+  @include mq(sm) {
+    order: 1;
+  }
+
 }

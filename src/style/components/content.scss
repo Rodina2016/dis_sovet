@@ -6,7 +6,7 @@
     position: relative;
     margin-top: -32px;
     background-color: map_get($palette, accent-main);
-    z-index: -1;
+    z-index: 1;
   }
 
   &__mb {

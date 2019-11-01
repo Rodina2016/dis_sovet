@@ -77,6 +77,15 @@
       @include mq(md) {
         width: 10px;
       }
+
+      &--lg {
+        width: 60px;
+        height: 30px;
+
+        @include mq(md) {
+          width: 60px;
+        }
+      }
     }
 
     &-name {

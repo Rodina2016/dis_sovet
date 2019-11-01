@@ -21,7 +21,6 @@
 
     &--bold {
       font-size: 14px;
-      font-weight: bold;
 
       @include mq(md) {
         font-weight: normal;
@@ -39,7 +38,6 @@
     }
 
     &--bold {
-      font-weight: bold;
       text-transform: uppercase;
 
       @include mq(md) {

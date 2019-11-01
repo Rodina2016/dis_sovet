@@ -106,9 +106,10 @@
     }
   }
   .steps__item-heading {
-    margin: 0;
+    margin: 0 0 7px 0;
     font-weight: bold;
     line-height: 1.5;
+    font-size: 18px;
     @include mq(xs) {
       line-height: 1.5rem;
     }

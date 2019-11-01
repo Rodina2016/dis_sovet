@@ -4,6 +4,16 @@
   padding-bottom: 340px;
   color: map_get($palette, bg);
 
+  @media (min-width: 1280px) and (max-width: 1600px) {
+    padding-bottom: 140px;
+  }
+
+  @include mq(md) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: map_get($palette, content);
+  }
+
   &__bg{
     position: absolute;
     left: -210px;
@@ -14,6 +24,31 @@
     border-bottom-right-radius: 180px;
     transform: rotate(3deg);
     z-index: -2;
+
+    @media (min-width: 1280px) and (max-width: 1600px) {
+      left: -65px;
+      top: -270px;
+      height: 150%;
+    }
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+
+  &__heading {
+    @include mq(md) {
+      margin-top: 0;
+      font-size: 40px;
+    }
+
+    @include mq(sm) {
+      text-align: center;
+    }
+
+    @include mq(xs) {
+      font-size: 24px;
+    }
   }
 
   &__text {
@@ -23,9 +58,29 @@
   &__icon {
     margin-top: 77px;
 
+    &-img {
+      justify-content: center;
+      display: flex;
+      min-height: 133px;
+    }
+
     &-text {
       max-width: 240px;
-      margin: 16px auto;
+      margin: 16px auto 0;
+
+      @include mq(md) {
+        font-size: 14px;
+      }
+    }
+
+    &-item {
+      @include mq(sm) {
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }

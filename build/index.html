@@ -11,6 +11,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/select2.full.min.js"></script>
     <script src="js/moment.min.js"></script>
+    <script src="js/ru.js"></script>
     <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/main.js"></script>
 </head>
@@ -150,6 +151,12 @@
         <symbol width="24" height="16" viewBox="0 0 24 16" id="filter">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M7 15C7 15.5523 7.44772 16 8 16H16C16.5523 16 17 15.5523 17 15C17 14.4477 16.5523 14 16 14H8C7.44772 14 7 14.4477 7 15ZM3 8C3 8.55229 3.44772 9 4 9H20C20.5523 9 21 8.55229 21 8C21 7.44772 20.5523 7 20 7H4C3.44772 7 3 7.44772 3 8ZM0 1C0 1.55228 0.447715 2 1 2H23C23.5523 2 24 1.55228 24 1C24 0.447715 23.5523 0 23 0H1C0.447716 0 0 0.447715 0 1Z" fill="#3951E7"/>
         </symbol>
+        <symbol width="48" height="24" viewBox="0 0 48 24" id="arrow-right-lg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M41.865 13.5684H0V10.4315H41.865L33.8086 2.04149L36.4768 0L47.9996 12L36.4768 24L33.8086 21.9585L41.865 13.5684Z" fill="#3951E7"/>
+        </symbol>
+        <svg width="24" height="22" viewBox="0 0 24 22" id="check">
+            <path d="M22.9519 0.561802C21.8689 -0.0213528 20.661 1.1033 19.9529 1.76977C18.3284 3.35261 16.9538 5.18539 15.4126 6.85154C13.7048 8.68431 12.1219 10.5171 10.3725 12.3083C9.37277 13.308 8.28977 14.391 7.62331 15.6406C6.12376 14.1826 4.83249 12.5998 3.16634 11.3086C1.95837 10.3922 -0.0410133 9.72573 0.000640602 11.9334C0.0839484 14.8076 2.62484 17.89 4.49926 19.8476C5.29069 20.6807 6.33203 21.5554 7.54 21.5971C8.99788 21.6804 10.4974 19.9309 11.3722 18.9729C12.9134 17.3067 14.163 15.4322 15.5792 13.7245C17.412 11.4752 19.2864 9.26747 21.0775 6.9765C22.2022 5.56027 25.7428 2.06127 22.9519 0.561802ZM1.83334 11.7668C1.79169 11.7668 1.75004 11.7668 1.66673 11.8084C1.50011 11.7668 1.37515 11.725 1.20854 11.6417C1.3335 11.5584 1.54177 11.6001 1.83334 11.7668Z" fill="white"/>
+        </svg>
     </svg>
     <header class="header">
         <div class="header-panel">
@@ -242,37 +249,39 @@
                     Диссертационные советы Университета ИТМО действуют с 2018 года в соответствии с Распоряжением
                     Правительства Российской Федерации <a href="#">№ 1792-р от 23 августа 2017 г.</a>
                 </p>
-                <div class="grid middle-lg">
-                    <div class="lg-7">
-                        <div class="grid ungutter">
-                            <div class="cell lg-3 stat__item">
+                <div class="grid middle-lg top-sm">
+                    <div class="cell lg-7 md-8 sm-12 xs-12">
+                        <div class="grid">
+                            <div class="cell lg-3 sm-3 xs-6 stat__item">
                                 <div class="stat__item-num">10</div>
                                 <div class="stat__item-text">
                                     Диссертационных советов
                                 </div>
                             </div>
-                            <div class="cell lg-3 stat__item">
+                            <div class="cell lg-3 sm-3 xs-6 stat__item">
                                 <div class="stat__item-num">2</div>
                                 <div class="stat__item-text">
                                     Совместных совета
                                 </div>
                             </div>
-                            <div class="cell lg-3 stat__item">
+                            <div class="cell lg-3 sm-3 xs-6 stat__item">
                                 <div class="stat__item-num">26</div>
                                 <div class="stat__item-text">
-                                    Научных специальностей
+                                    Научных  специальностей
                                 </div>
                             </div>
-                            <div class="cell lg-3 stat__item">
+                            <div class="cell lg-3 sm-3 xs-6 stat__item">
                                 <div class="stat__item-num">4</div>
                                 <div class="stat__item-text">
                                     Отрасли <br> наук
                                 </div>
                             </div>
                         </div>
+                        <a href="#" class="stat__link">
+                        </a>
                     </div>
-                    <div class="lg-5">
-                        <img src="img/main-photo.png" alt="">
+                    <div class="cell lg-5 md-4 sm-12 xs-12 center-sm">
+                        <img src="img/main-photo.png" alt="" class="stat__photo">
                     </div>
                 </div>
             </div>
@@ -289,20 +298,26 @@
                     защите.
                 </p>
                 <div class="solutions__icon grid">
-                    <div class="solutions__icon-item cell lg-4 center-lg">
-                        <img src="img/icon1.png" alt="" class="solutions__icon-img">
+                    <div class="solutions__icon-item cell lg-4 sm-12 center-lg">
+                        <div class="solutions__icon-img middle-lg">
+                            <img src="img/icon1.png" alt="">
+                        </div>
                         <div class="solutions__icon-text">
                             Подача документов на защиту только в электронном виде
                         </div>
                     </div>
-                    <div class="solutions__icon-item cell lg-4 center-lg">
-                        <img src="img/icon2.png" alt="" class="solutions__icon-img">
+                    <div class="solutions__icon-item cell lg-4 sm-12 center-lg">
+                        <div class="solutions__icon-img middle-lg">
+                        <img src="img/icon2.png" alt="">
+                    </div>
                         <div class="solutions__icon-text">
                             Электронное аттестационное дело с цифровыми подписями
                         </div>
                     </div>
-                    <div class="solutions__icon-item cell lg-4 center-lg">
-                        <img src="img/icon2.png" alt="" class="solutions__icon-img">
+                    <div class="solutions__icon-item cell lg-4 sm-12 center-lg">
+                        <div class="solutions__icon-img middle-lg">
+                            <img src="img/icon3.png" alt="">
+                        </div>
                         <div class="solutions__icon-text">
                             Возможность дистанционного присутствия членов диссовета и оппонентов
                         </div>
@@ -315,6 +330,223 @@
                 <h2 class="features__heading">
                     Особенности получения ученой степени в Университете ИТМО
                 </h2>
+                <div class="grid sm-offset-1 sm-10 xs-10 xs-offset-1">
+                    <div class="cell lg-4 md-6 sm-12 features__item">
+                        <div class="features__item-wrap">
+                            <svg class="features__item-icon">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                Обязательная международная экспертиза диссертации
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell lg-4 md-6 sm-12 features__item">
+                        <div class="features__item-wrap">
+                            <svg class="features__item-icon">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                Результаты диссертации должны быть опубликованны в международных изданиях
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell lg-4 md-6 sm-12 features__item">
+                        <div class="features__item-wrap">
+                            <svg class="features__item-icon">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                Текст диссертации может быть полностью написан на английском языке
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell lg-4 md-6 sm-12 features__item">
+                        <div class="features__item-wrap">
+                            <svg class="features__item-icon">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                Возможность защиты на английском языке без перевода на русский
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell lg-4 md-6 sm-12 features__item">
+                        <div class="features__item-wrap">
+                            <svg class="features__item-icon">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                Публикация диссертации на сайте за месяц (для кандидата) и за 2 месяца (для доктора) до
+                                дня защиты
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="structure">
+            <div class="wrapper">
+                <div class="grid">
+                    <div class="cell lg-8 md-12 lg-offset-4 md-offset-0">
+                        <h2 class="structure__heading">
+                            Структура диссертационного совета
+                        </h2>
+                    </div>
+                    <div class="cell lg-4 md-6 sm-12 sm-order-1 center-sm">
+                        <img src="img/structure.png" alt="" class="structure__photo">
+                    </div>
+                    <div class="cell lg-8 md-6 sm-10 sm-offset-1 xs-10 xs-offset-1">
+                        <div class="grid">
+                            <div class="cell lg-6 md-12 structure__item">
+                                <div class="structure__item-wrap">
+                                    <div class="structure__item-icon">
+                                        <img src="img/str1.png" alt="">
+                                    </div>
+                                    <div class="structure__item-text">
+                                        В состав диссертационного совета входят 9 человек при защите кандидатской
+                                        степени и 11 человек при защите докторской степени
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell lg-6 md-12 structure__item">
+                                <div class="structure__item-wrap">
+                                    <div class="structure__item-icon">
+                                        <img src="img/str2.png" alt="">
+                                    </div>
+                                    <div class="structure__item-text">
+                                        Персональный состав диссертационного совета утверждается на каждую защиту
+                                        диссертации
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell lg-6 md-12 structure__item">
+                                <div class="structure__item-wrap">
+                                    <div class="structure__item-icon">
+                                        <img src="img/str3.png" alt="">
+                                    </div>
+                                    <div class="structure__item-text">
+                                        Удаленная работа с оппонентами и электронный отзыв на диссертацию
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="documents">
+            <div class="wrapper">
+                <div class="grid">
+                    <div class="cell lg-8 md-12">
+                        <h2 class="documents__heading">
+                            Документы об ученых степенях
+                        </h2>
+                        <a href="#" class="documents__link">
+                            Все образцы
+                            <i class="icon-arrow-right documents__link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="cell lg-8 md-7 sm-8 sm-offset-2 xs-10 xs-offset-1">
+                        <div class="grid">
+                            <div class="cell lg-6 md-12 documents__item">
+                                <div class="documents__item-wrap">
+                                    <div class="documents__item-icon">
+                                        <img src="img/diplom1.png" alt="">
+                                    </div>
+                                    <div class="documents__item-text">
+                                        Диплом о присуждении степени на английском и русском языках
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell lg-6 md-12 documents__item">
+                                <div class="documents__item-wrap">
+                                    <div class="documents__item-icon">
+                                        <img src="img/diplom2.png" alt="">
+                                    </div>
+                                    <div class="documents__item-text">
+                                        Индивидуальный QR-код на каждом дипломе, содержащий всю необходимую для
+                                        работодателей информацию по материлам диссертации и ее защите
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell lg-4 md-5 sm-12 documents__photo end-md center-sm">
+                        <img src="img/diplom.jpg" alt="диплом">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="events">
+            <div class="wrapper">
+                <h2 class="events__heading">
+                    Объявления о защитах
+                </h2>
+                <a href="#" class="events__link">
+                    Смотреть все
+                    <i class="icon-arrow-right events__link-icon"></i>
+                </a>
+                <div class="grid owl-carousel" id="events-carousel">
+                    <div class="cell lg-3 md-12 events__item">
+                        <a href="" class="events__item-link">
+                            <span class="events__item-heading">
+                                Мельник Максим Владимирович
+                            </span>
+                            <span class="events__item-text">
+                                Зависимость когерентных свойств фемтосекундных спектральных
+                                суперконтинуумов и формируемых из них
+                                последовательностей сверхкоротких импульсов от фазовой модуляции излучения
+                            </span>
+                            <span class="events__item-date">
+                                Дата защиты: 16.10.2019
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="cell lg-3 md-12 events__item">
+                        <a href="" class="events__item-link">
+                            <span class="events__item-heading">
+                                Чугина Юлия Владимировна
+                            </span>
+                            <span class="events__item-text">
+                                Разработка технологии хлебобулочных изделий из пшеничной муки с применением экстрактов стевии и продуктов биомодификации ржи
+                            </span>
+                            <span class="events__item-date">
+                                Дата защиты: 25.10.2019
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="cell lg-3 md-12 events__item">
+                        <a href="" class="events__item-link">
+                            <span class="events__item-heading">
+                               Александров Павел Сергеевич
+                            </span>
+                            <span class="events__item-text">
+                                Функционально-технологические свойства зерна проса посевного Panicum miliaceum L. отечественной селекции и разработка рецептур мучных изделий на его основе
+                            </span>
+                            <span class="events__item-date">
+                                Дата защиты: 05.11.2019
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="cell lg-3 md-12 events__item">
+                        <a href="" class="events__item-link">
+                            <span class="events__item-heading">
+                                Попогрельский Владислав Анатольевич
+                            </span>
+                            <span class="events__item-text">
+                                Исследование влияния фазовых и амплитудных искажений оптического сигнала в электрооптическом модуляторе на точностные характеристики волоконно-оптического гироскопа
+                            </span>
+                            <span class="events__item-date">
+                                Дата защиты: 08.11.2019
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
@@ -361,10 +593,10 @@
                 <div class="grid middle-lg">
                     <div class="cell lg-4 md-12 center-md">
                         <p class="footer-panel__p">
-                            Информация © 1993–2018  Университет ИТМО
+                            Информация © 1993–2019  Университет ИТМО
                         </p>
                         <p class="footer-panel__p">
-                            Разработка © 2018  Департамент информационных технологий
+                            Разработка © 2019  Департамент информационных технологий
                         </p>
                     </div>
                     <div class="lg-4 md-12 center-lg first-md">
