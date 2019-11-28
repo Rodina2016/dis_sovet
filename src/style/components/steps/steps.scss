@@ -26,7 +26,7 @@
       bottom: -3rem;
       border-left: 3px dashed #{map_get($palette, accent-main)};
       background: #{map_get($palette, bg)};
-      z-index: z(pseudo-back);
+      z-index: 0;
     }
     &.is-active {
       background: transparent;
@@ -81,7 +81,7 @@
       border: 4px solid #{map_get($palette, bg)};
       border-radius: 50%;
       box-shadow: 0 4px 8px 0 rgba(0, 120, 215, 0.5);
-      z-index: z(pseudo);
+      z-index: 1;
       transition: $transition;
       @include mq(xs) {
         left: $gutter * 1.25 / -2;

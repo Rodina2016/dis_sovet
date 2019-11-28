@@ -28,7 +28,11 @@
                     <div class="speakers__col cell xs-12 sm-12 md-4 lg-4">
                         <div class="speakers__item">
                             <div class="speakers__item-photo">
-                                <img src="img/1.jpg" alt="">
+                                <!--добавлена обертка speakers__item-wrap-->
+                                <div class="speakers__item-wrap">
+                                    <!--добавлен класс speakers__item-img-->
+                                    <img src="img/2.jpeg" alt="" class="speakers__item-img">
+                                </div>
                             </div>
                             <div class="speakers__item-info">
                                 <p class="speakers__item-heading">
@@ -48,7 +52,11 @@
                     <div class="speakers__col cell xs-12 sm-12 md-4 lg-4">
                         <div class="speakers__item">
                             <div class="speakers__item-photo">
-                                <img src="img/2.jpg" alt="">
+                                <!--добавлена обертка speakers__item-wrap-->
+                                <div class="speakers__item-wrap">
+                                    <!--добавлен класс speakers__item-img-->
+                                    <img src="img/2.jpeg" alt="" class="speakers__item-img">
+                                </div>
                             </div>
                             <div class="speakers__item-info">
                                 <p class="speakers__item-heading">
@@ -68,7 +76,11 @@
                     <div class="speakers__col cell xs-12 sm-12 md-4 lg-4">
                         <div class="speakers__item">
                             <div class="speakers__item-photo">
-                                <img src="img/default.jpg" alt="">
+                                <!--добавлена обертка speakers__item-wrap-->
+                                <div class="speakers__item-wrap">
+                                    <!--добавлен класс speakers__item-img-->
+                                    <img src="img/2.jpeg" alt="" class="speakers__item-img">
+                                </div>
                             </div>
                             <div class="speakers__item-info">
                                 <p class="speakers__item-heading">
@@ -86,33 +98,67 @@
                     </div>
                 </div>
             </section>
-            <section class="info-card transform-block">
-                <div class="transform-block__wrap">
-                </div>
+            <!--Добавлен класс info-card-bg-->
+            <section class="info-card info-card--bg transform-block" id="info_card">
+                <!--Удален блок transform-block__wrap-->
                 <div class="transform-block__content wrapper">
                     <h3>Информация о защитах</h3>
+                    <!--Года сделаны ссылками, к активному году надо добавлять класс active-->
                     <div class="filter-tab">
                         <div class="filter-tab__item">
-                            <input type="radio" id="tab1" name="year" class="filter-tab__item-input" checked>
-                            <label for="tab1" class="filter-tab__item-label">Все</label>
+                            <a href="#info_card" class="filter-tab__item-label active">Все</a>
                         </div>
-
                         <div class="filter-tab__item">
-                            <input type="radio" id="tab2" name="year" class="filter-tab__item-input">
-                            <label for="tab2" class="filter-tab__item-label">2019</label>
+                            <a href="#info_card" class="filter-tab__item-label">2019</a>
                         </div>
-
                         <div class="filter-tab__item">
-                            <input type="radio" id="tab3" name="year" class="filter-tab__item-input">
-                            <label for="tab3" class="filter-tab__item-label">2018</label>
+                            <a href="#info_card" class="filter-tab__item-label">2018</a>
                         </div>
-
                         <div class="filter-tab__item">
-                            <input type="radio" id="tab4" name="year" class="filter-tab__item-input">
-                            <label for="tab4" class="filter-tab__item-label">2017</label>
+                            <a href="#info_card" for="tab4" class="filter-tab__item-label">2017</a>
                         </div>
                     </div>
-                    <a href="/dis_card.html" class="info-card__item">
+                    <!--Добавить на первые 10 элементов класс show-->
+                    <a href="/dis_card.html" class="info-card__item show">
+                        <div class="info-card__item-wrap">
+                            <div class="grid">
+                                <div class="cell lg-8 md-7 sm-12 info-card__item-descr">
+                                    <div class="info-card__item-name">
+                                        Чугина Юлия Владимировна
+                                    </div>
+                                    <div class="info-card__item-title">
+                                        05.13.12 Системы автоматизации проектирования (технические науки)
+                                    </div>
+                                    <div class="info-card__item-heading">
+                                        Исследование структуры сингулярных пучков с полуцелыми топологическими зарядами
+                                        в оптически неоднородных и анизотропных средах
+                                    </div>
+                                </div>
+                                <div class="cell lg-3 md-4 sm-10 xs-12 end-lg start-sm center-xs grid ungutter">
+                                    <div class="info-card__item-label">
+                                        Кандидатская
+                                    </div>
+                                    <div class="lg-12 sm-8 xs-12">
+                                        <div class="info-card__item-date info-card__item-date--sovet">
+                                            Диссертационный совет 01.18.00
+                                        </div>
+                                        <div class="info-card__item-date">
+                                            Дата размещения: 26.09.2019
+                                        </div>
+                                        <div class="info-card__item-date">
+                                            Дата защиты: 15.11.2019
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell lg-1 sm-2 md-1 xs-12 middle-lg end-lg center-xs grid info-card__item-link">
+                                    <div class="info-card__item-icon">
+                                        <!--удалены иконки-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="info-card__item show">
                         <div class="info-card__item-wrap">
                             <div class="grid">
                                 <div class="cell lg-8 md-7 sm-12 info-card__item-descr">
@@ -151,101 +197,100 @@
                                         <svg class="info-card__item-svg hidden-lg visible-md">
                                             <use xlink:href="#icon-arrow-right"></use>
                                         </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="info-card__item show">
+                        <div class="info-card__item-wrap">
+                            <div class="grid">
+                                <div class="cell lg-8 md-7 sm-12 info-card__item-descr">
+                                    <div class="info-card__item-name">
+                                        Чугина Юлия Владимировна
+                                    </div>
+                                    <div class="info-card__item-title">
+                                        05.13.12 Системы автоматизации проектирования (технические науки)
+                                    </div>
+                                    <div class="info-card__item-heading">
+                                        Исследование структуры сингулярных пучков с полуцелыми топологическими зарядами
+                                        в оптически неоднородных и анизотропных средах
+                                    </div>
+                                </div>
+                                <div class="cell lg-3 md-4 sm-10 xs-12 end-lg start-sm center-xs grid ungutter">
+                                    <div class="info-card__item-label">
+                                        Кандидатская
+                                    </div>
+                                    <div class="lg-12 sm-8 xs-12">
+                                        <div class="info-card__item-date info-card__item-date--sovet">
+                                            Диссертационный совет 01.18.00
+                                        </div>
+                                        <div class="info-card__item-date">
+                                            Дата размещения: 26.09.2019
+                                        </div>
+                                        <div class="info-card__item-date">
+                                            Дата защиты: 15.11.2019
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell lg-1 sm-2 md-1 xs-12 middle-lg end-lg center-xs grid info-card__item-link">
+                                    <div class="info-card__item-icon">
+                                        <!--удалены иконки-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="info-card__item ">
+                        <div class="info-card__item-wrap">
+                            <div class="grid">
+                                <div class="cell lg-8 md-7 sm-12 info-card__item-descr">
+                                    <div class="info-card__item-name">
+                                        Чугина Юлия Владимировна
+                                    </div>
+                                    <div class="info-card__item-title">
+                                        05.13.12 Системы автоматизации проектирования (технические науки)
+                                    </div>
+                                    <div class="info-card__item-heading">
+                                        Исследование структуры сингулярных пучков с полуцелыми топологическими зарядами
+                                        в оптически неоднородных и анизотропных средах
+                                    </div>
+                                </div>
+                                <div class="cell lg-3 md-4 sm-10 xs-12 end-lg start-sm center-xs grid ungutter">
+                                    <div class="info-card__item-label">
+                                        Кандидатская
+                                    </div>
+                                    <div class="lg-12 sm-8 xs-12">
+                                        <div class="info-card__item-date info-card__item-date--sovet">
+                                            Диссертационный совет 01.18.00
+                                        </div>
+                                        <div class="info-card__item-date">
+                                            Дата размещения: 26.09.2019
+                                        </div>
+                                        <div class="info-card__item-date">
+                                            Дата защиты: 15.11.2019
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell lg-1 sm-2 md-1 xs-12 middle-lg end-lg center-xs grid info-card__item-link">
+                                    <div class="info-card__item-icon">
+                                        <!--удалены иконки-->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </a>
 
-                    <a href="#" class="info-card__item">
-                        <div class="info-card__item-wrap">
-                            <div class="grid">
-                                <div class="cell lg-8 md-7 sm-12 info-card__item-descr">
-                                    <div class="info-card__item-name">
-                                        Чугина Юлия Владимировна
-                                    </div>
-                                    <div class="info-card__item-title">
-                                        05.13.12 Системы автоматизации проектирования (технические науки)
-                                    </div>
-                                    <div class="info-card__item-heading">
-                                        Исследование структуры сингулярных пучков с полуцелыми топологическими зарядами
-                                        в оптически неоднородных и анизотропных средах
-                                    </div>
-                                </div>
-                                <div class="cell lg-3 md-4 sm-10 xs-12 end-lg start-sm center-xs grid ungutter">
-                                    <div class="info-card__item-label">
-                                        Кандидатская
-                                    </div>
-                                    <div class="lg-12 sm-8 xs-12">
-                                        <div class="info-card__item-date info-card__item-date--sovet">
-                                            Диссертационный совет 01.18.00
-                                        </div>
-                                        <div class="info-card__item-date">
-                                            Дата размещения: 26.09.2019
-                                        </div>
-                                        <div class="info-card__item-date">
-                                            Дата защиты: 15.11.2019
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cell lg-1 sm-2 md-1 xs-12 middle-lg end-lg center-xs grid info-card__item-link">
-                                    <div class="info-card__item-icon">
-                                        <svg class="info-card__item-svg hidden-md">
-                                            <use xlink:href="#arrow-right"></use>
-                                        </svg>
-                                        <svg class="info-card__item-svg hidden-lg visible-md">
-                                            <use xlink:href="#icon-arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
+                    <!--Добавлена кнопка start-->
+                    <div class="grid">
+                        <div class="lg-12 center-lg">
+                            <button id="load-announces" class="button button-blue button-rounded button-bordered button-icon-right info-card__btn">
+                                Показать еще
+                                <i class="icon-corner-down" aria-hidden="true"></i>
+                            </button>
                         </div>
-                    </a>
-
-                    <a href="#" class="info-card__item">
-                        <div class="info-card__item-wrap">
-                            <div class="grid">
-                                <div class="cell lg-8 md-7 sm-12 info-card__item-descr">
-                                    <div class="info-card__item-name">
-                                        Чугина Юлия Владимировна
-                                    </div>
-                                    <div class="info-card__item-title">
-                                        05.13.12 Системы автоматизации проектирования (технические науки)
-                                    </div>
-                                    <div class="info-card__item-heading">
-                                        Исследование структуры сингулярных пучков с полуцелыми топологическими зарядами
-                                        в оптически неоднородных и анизотропных средах
-                                    </div>
-                                </div>
-                                <div class="cell lg-3 md-4 sm-10 xs-12 end-lg start-sm center-xs grid ungutter">
-                                    <div class="info-card__item-label">
-                                        Кандидатская
-                                    </div>
-                                    <div class="lg-12 sm-8 xs-12">
-                                        <div class="info-card__item-date info-card__item-date--sovet">
-                                            Диссертационный совет 01.18.00
-                                        </div>
-                                        <div class="info-card__item-date">
-                                            Дата размещения: 26.09.2019
-                                        </div>
-                                        <div class="info-card__item-date">
-                                            Дата защиты: 15.11.2019
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cell lg-1 sm-2 md-1 xs-12 middle-lg end-lg center-xs grid info-card__item-link">
-                                    <div class="info-card__item-icon">
-                                        <svg class="info-card__item-svg hidden-md">
-                                            <use xlink:href="#arrow-right"></use>
-                                        </svg>
-                                        <svg class="info-card__item-svg hidden-lg visible-md">
-                                            <use xlink:href="#icon-arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
+                    <!--Добавлена кнопка end-->
                 </div>
             </section>
         </div>

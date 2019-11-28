@@ -7,6 +7,7 @@
     <title>dis sovet</title>
     <link rel="stylesheet" href="css/main.css?v=10">
     <link rel="stylesheet" href="css/main.css?v=10">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/select2.full.min.js"></script>
@@ -167,12 +168,16 @@
                             <use xlink:href="#logo_itmo"></use>
                         </svg>
                     </a>
-                    <a href="#" class="header-panel__lang grid middle-lg lg-6 end-lg">
-                        <span class="hidden-xs">Сайт аспирантуры</span>
-                        <svg class="header-panel__lang-icon">
-                            <use xlink:href="#lang-icon"></use>
-                        </svg>
-                    </a>
+                    <div class="grid middle-lg lg-6 end-lg">
+                        <a href="#" class="header-panel__lang">
+                            <span class="hidden-xs">Сайт аспирантуры</span>
+                        </a>
+                        <a href="#" class="header-panel__lang-link">
+                            <svg class="header-panel__lang-icon">
+                                <use xlink:href="#lang-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -258,7 +263,11 @@
                     <div class="cell xs-12 sm-6 md-6 lg-6">
                         <div class="speakers__item">
                             <div class="speakers__item-photo">
-                                <img src="img/1.jpg" alt="">
+                                <!--добавлена обертка speakers__item-wrap-->
+                                <div class="speakers__item-wrap">
+                                    <!--добавлен класс speakers__item-img-->
+                                    <img src="img/2.jpeg" alt="" class="speakers__item-img">
+                                </div>
                             </div>
                             <div class="speakers__item-info">
                                 <p class="speakers__item-heading">
@@ -278,7 +287,9 @@
                     <div class="cell xs-12 sm-6 md-6 lg-6">
                         <div class="speakers__item">
                             <div class="speakers__item-photo">
-                                <img src="img/2.jpg" alt="">
+                                <div class="speakers__item-wrap">
+                                    <img src="img/anon_female.png" alt="" class="speakers__item-img">
+                                </div>
                             </div>
                             <div class="speakers__item-info">
                                 <p class="speakers__item-heading">
@@ -298,7 +309,9 @@
                     <div class="cell xs-12 sm-6 md-6 lg-6">
                         <div class="speakers__item">
                             <div class="speakers__item-photo">
-                                <img src="img/default.jpg" alt="">
+                                <div class="speakers__item-wrap">
+                                    <img src="img/2.jpeg" alt="" class="speakers__item-img">
+                                </div>
                             </div>
                             <div class="speakers__item-info">
                                 <p class="speakers__item-heading">

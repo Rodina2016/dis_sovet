@@ -79,61 +79,36 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     }
+    const listTargetSelect = $.makeArray($('#select_spec').find('option'));
+    console.log(listTargetSelect);
+
+    $('#select_dis').change(function () {
+        const attr = $('#select_dis :selected').attr('data-id-sovet');
+        console.log(attr);
+
+        listTargetSelect.forEach(function (el, ind) {
+           const currentAttr = $(el).attr('data-id-spec');
+            $(el).prop("disabled", false);
+           if(currentAttr === attr) {
+               $(el).prop("disabled", true);
+           }
+        });
+
+        setTimeout(function () {
+            $('select').select2('destroy').select2({
+                minimumResultsForSearch: -1
+            });
+        })
+
+        //$('select').select2('destroy');
+
+    });
 
     $('select').select2({
         minimumResultsForSearch: -1
     });
 
     $('.filters__wrap').addClass('hidden-md');
-
-    $('.datepicker').datetimepicker({
-        format: 'DD / MM / YYYY',
-        minDate: '1950-01-01',
-        icons: {
-            date: 'icon-calendar',
-            next: 'icon-arrow',
-            previous: 'icon-arrow'
-        },
-        locale: 'ru',
-        allowInputToggle: true,
-        useCurrent: false,
-        ignoreReadonly: true,
-        debug: true // change that for dev
-    });
-
-    // disable letters input for datepicker
-    var timePickerInput = $('.datepicker input');
-    timePickerInput.on('keydown', function(e) {
-        if (
-            (e.which >= 48 && e.which <= 57) ||
-            (e.which >= 96 && e.which <= 105) ||
-            e.which === 8 ||
-            e.which === 35 ||
-            e.which === 36 ||
-            e.which === 191 ||
-            e.which === 32 ||
-            e.which === 123 ||
-            e.which === 46
-        ) {
-            return true;
-        } else {
-            return false;
-        }
-    });
-
-    $('.date-range.date-start').on('dp.change', function(e) {
-        var dateId = $(this).attr('data-date-id');
-        $('.date-end[data-date-id="' + dateId + '"]')
-            .data('DateTimePicker')
-            .minDate(e.date);
-    });
-
-    $('.date-range.date-end').on('dp.change', function(e) {
-        var dateId = $(this).attr('data-date-id');
-        $('.date-start[data-date-id="' + dateId + '"]')
-            .data('DateTimePicker')
-            .maxDate(e.date);
-    });
 
     $('.filters__close').click(function () {
         $(this).next('.filters__wrap').slideToggle();
@@ -168,25 +143,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /*steps*/
 
-    var Steps = {
+    let Steps = {
         item: '.steps__item',
         head: $('.steps__item-head'),
         body: '.steps__item-body',
         btn: $('.steps__button')
     };
 
-    var toggleButtonText = function(button) {
-        var newTextContent = button.attr('data-text');
+    let toggleButtonText = function(button) {
+        let newTextContent = button.attr('data-text');
         button.attr('data-text', button.text());
         button.text(newTextContent);
 
         button.toggleClass('is-show');
     };
 
-    var onStepsHeadClick = function() {
-        var $this = $(this);
-        var stepsBtn = $this.closest('.steps').find(Steps.btn);
-        var stepsItem = $this.parent(Steps.item);
+    let onStepsHeadClick = function() {
+        let $this = $(this);
+        let stepsBtn = $this.closest('.steps').find(Steps.btn);
+        let stepsItem = $this.parent(Steps.item);
 
         if (stepsItem.hasClass('is-active')) {
             stepsItem.removeClass('is-active');
@@ -195,8 +170,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 toggleButtonText(stepsBtn);
             }
         } else {
-            var activeSteps = stepsItem.siblings('.is-active').length;
-            var steps = stepsItem.siblings(stepsItem).length;
+            let activeSteps = stepsItem.siblings('.is-active').length;
+            let steps = stepsItem.siblings(stepsItem).length;
             stepsItem.addClass('is-active');
             $this.siblings(Steps.body).slideDown();
             if (activeSteps === steps) {
@@ -206,9 +181,9 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     Steps.head.on('click', onStepsHeadClick);
 
-    var onStepsBtnClick = function() {
-        var $this = $(this);
-        var closestStepsItem = $this.closest('.steps').find(Steps.item);
+    let onStepsBtnClick = function() {
+        let $this = $(this);
+        let closestStepsItem = $this.closest('.steps').find(Steps.item);
 
         if ($this.hasClass('is-show')) {
             closestStepsItem.removeClass('is-active');
@@ -230,5 +205,28 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     Steps.btn.on('click', onStepsBtnClick);
 
+    /*click button show more*/
 
+    const infoCardItem = $('.info-card__item');
+    const arrayItems = $.makeArray(infoCardItem);
+    const elemShow = 10;
+
+    if(arrayItems.length > elemShow ) {
+        $('.info-card__btn').addClass('show');
+    }
+
+    $(document).on('click', '.info-card__btn', function () {
+        const lastShowItem = $('.info-card__item.show');
+        const indLastShowItem = lastShowItem.length - 1;
+
+        arrayItems.forEach(function (el, ind) {
+           if(ind > indLastShowItem && ind <= indLastShowItem + elemShow) {
+               $(el).addClass('show');
+           }
+        });
+
+        if($('.info-card__item.show').length === arrayItems.length) {
+            $(this).removeClass('show');
+        }
+    });
 });

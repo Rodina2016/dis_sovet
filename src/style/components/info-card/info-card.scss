@@ -1,8 +1,18 @@
 .info-card {
   padding-bottom: 80px;
+
+  &--bg {
+    padding-top: 40px;
+    background-color: map_get($palette, bg-dark);
+  }
+
   &__item {
-    display: block;
+    display: none;
     margin-bottom: 32px;
+
+    &.show {
+      display: block;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -23,14 +33,7 @@
       }
 
       .info-card__item-icon {
-        transition: $transition;
-        &:after {
-          width: 25px;
-
-          @include mq(md) {
-            display: none;
-          }
-        }
+        width: 60px;
       }
     }
 
@@ -51,20 +54,10 @@
     }
 
     &-icon {
-      position: relative;
-      display: inline-block;
+      width: 30px;
       height: 20px;
+      background: url('../img/arrow-right-xs.png') no-repeat 100% 50%;
       transition: $transition;
-
-      &:after {
-        @include pseudo-element('');
-        top: 9px;
-        right: 29px;
-        width: 0;
-        height: 2px;
-        background-color: map_get($palette, accent-main);
-        transition: $transition;
-      }
     }
 
     &-svg {
@@ -134,7 +127,7 @@
     }
 
     &-label {
-      display: inline-block;
+      height: 40px;
       padding: 9px 16px;
       margin-bottom: 12px ;
       font-size: 14px;
@@ -201,7 +194,12 @@
   }
 
   &__btn {
+    display: none;
     margin-top: 48px;
+
+    &.show {
+      display: inline-block;
+    }
   }
 
   &__person {

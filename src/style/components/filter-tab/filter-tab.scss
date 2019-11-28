@@ -64,6 +64,11 @@
         border-left: none;
         font-size: 14px;
       }
+
+      &.active {
+        background-color: map_get($palette, accent-second);
+        color: map_get($palette, bg);
+      }
     }
   }
 }
