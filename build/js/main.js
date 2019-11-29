@@ -80,11 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     const listTargetSelect = $.makeArray($('#select_spec').find('option'));
-    console.log(listTargetSelect);
 
     $('#select_dis').change(function () {
         const attr = $('#select_dis :selected').attr('data-id-sovet');
-        console.log(attr);
 
         listTargetSelect.forEach(function (el, ind) {
            const currentAttr = $(el).attr('data-id-spec');
@@ -100,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         })
 
-        //$('select').select2('destroy');
 
     });
 

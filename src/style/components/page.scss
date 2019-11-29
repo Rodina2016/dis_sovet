@@ -106,6 +106,7 @@ ol {
 }
 
 .grid--col {
+  display: flex;
   flex-direction: column;
   @include mq(xs) {
     display: block;

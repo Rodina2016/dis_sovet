@@ -6,6 +6,8 @@
   }
 
   &__wrap {
+    display: flex;
+    flex-direction: column;
     padding: 24px;
     background-color: map_get($palette, bg);
     border-radius: 15px;
@@ -48,6 +50,7 @@
   }
 
   &__text {
+    flex-grow: 1;
     font-size: 14px;
     line-height: 1.8;
 

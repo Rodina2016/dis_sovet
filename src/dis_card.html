@@ -9,7 +9,7 @@
         <div class="wrapper">
             //= template/partials/breadscrumbs.html
             <h1>Информация о диссертации</h1>
-            <div class="content__col-wrap content__col-wrap--row grid ungutter">
+            <div class="content__col-wrap content__col-wrap--row grid">
                 <div class="cell lg-8 md-12 content__block-col">
                     <div class="content__col-row">
                         <p class="content__block-label">
@@ -20,7 +20,7 @@
                             и метаповерхности
                         </div>
                     </div>
-                    <div class="content__col-row content__col-row--border">
+                    <div class="content__col-row">
                         <p class="content__block-label">
                             Соискатель
                         </p>
@@ -44,26 +44,27 @@
                             05.13.12 Системы автоматизации проектирования (приборостроение) (технические науки)
                         </div>
                     </div>
-                    <div class="content__col-row content__col-row--flex">
-                        <div class="lg-6 sm-12">
+                    <div class="content__col-row">
+
                             <p class="content__block-label">
                                 Дата размещения
                             </p>
                             <div class="content__block-text">
                                 30.07.2019
                             </div>
-                        </div>
-                        <div class="lg-6 sm-12">
+
+                    </div>
+                    <div class="content__col-row">
                             <p class="content__block-label">
                                 Дата защиты
                             </p>
                             <div class="content__block-text">
                                 25.09.2019
                             </div>
-                        </div>
+
                     </div>
                 </div>
-                <div class="cell lg-4 md-12 content__block-col">
+                <div class="cell lg-4 md-12 content__block-col content__block-col--border">
                     <div class="content__col-row">
                         <div class="content__block-label">
                             Файлы
@@ -74,7 +75,7 @@
                             </svg>
                             Диссертация.pdf
                             <span class="content__file-size">(2 Мб)</span>
-                            <span class="content__file-info">Добавлено 15.07.2019</span>
+                            <span class="content__file-info">от 15.07.2019</span>
                         </a>
                     </div>
                     <div class="content__col-row">
@@ -84,7 +85,7 @@
                             </svg>
                             Выписка о приеме к защите.pdf
                             <span class="content__file-size">(2 Мб)</span>
-                            <span class="content__file-info">Добавлено 15.07.2019</span>
+                            <span class="content__file-info">от 15.07.2019</span>
                         </a>
                     </div>
                     <div class="content__col-row">
@@ -94,7 +95,7 @@
                             </svg>
                             Объявление о защите.pdf
                             <span class="content__file-size">(2 Мб)</span>
-                            <span class="content__file-info">Добавлено 15.07.2019</span>
+                            <span class="content__file-info">от 15.07.2019</span>
                         </a>
                     </div>
                     <div class="content__col-row">
@@ -113,6 +114,16 @@
                             </svg>
                             Объявление о защите.pdf
                             <span class="content__file-size">(2 Мб)</span>
+                        </a>
+                    </div>
+                    <div class="content__col-row">
+                        <a href="" class="content__block-file content__block-file--mb0" download="">
+                            <svg class="content__file-icon">
+                                <use href="#pdf"></use>
+                            </svg>
+                            Решение о присуждении ученой степени
+                            <span class="content__file-size">(2 Мб)</span>
+                            <span class="content__file-info">от 15.07.2019</span>
                         </a>
                     </div>
                 </div>
@@ -137,18 +148,20 @@
                 <div class="transform-block__content wrapper">
                     <div class="grid">
                         <div class="grid grid--col cell lg-4 sm-12 ungutter">
-                            <h3>Научный руководитель</h3>
+                            <h3>Ведущая организация</h3>
                             <div class="card card--grow1 sm-6 xs-12">
                                 <div class="card__wrap">
                                     <p class="card__heading">
-                                        Донецкая Юлия Валерьевна
-                                    </p>
-                                    <p class="card__position">
-                                        к.т.н, профессор
+                                        ФГБУН "Федеральный исследовательский центр питания, биотехнологии и безопасности пищи"
                                     </p>
                                     <p class="card__text">
-                                        "Санкт-Петербургский национальный исследовательский университет информационных технологий, механики и оптики"
                                     </p>
+                                    <a href="#" class="card__file" download="">
+                                        <svg class="card__file-svg">
+                                            <use xlink:href="#pdf"></use>
+                                        </svg>
+                                        Отзыв.pdf (2 Мб)
+                                    </a>
                                     <a href="#" class="card__file" download="">
                                         <svg class="card__file-svg">
                                             <use xlink:href="#pdf"></use>
@@ -158,9 +171,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cell lg-8 sm-12">
+                        <div class="cell lg-8 sm-12 grid--col">
                             <h3>Официальные оппоненты</h3>
-                            <div class="grid">
+                            <div class="grid card--grow1">
                                 <div class="card cell lg-6 sm-6 xs-12">
                                     <div class="card__wrap">
                                         <p class="card__heading">
@@ -208,7 +221,7 @@
                             </div>
                         </div>
                         <div class="cell lg-12 sm-12">
-                            <h3>Официальные оппоненты</h3>
+                            <h3>Отзывы на автореферат</h3>
                             <div class="grid">
                                 <div class="card cell lg-4 sm-6 xs-12">
                                     <div class="card__wrap">
@@ -225,12 +238,6 @@
                                             <svg class="card__file-svg">
                                                 <use xlink:href="#pdf"></use>
                                             </svg>
-                                            Рецензия.pdf (2 Мб)
-                                        </a>
-                                        <a href="#" class="card__file" download="">
-                                            <svg class="card__file-svg">
-                                                <use xlink:href="#pdf"></use>
-                                            </svg>
                                             Ответ на рецензию.pdf (2 Мб)
                                         </a>
                                     </div>
@@ -240,17 +247,14 @@
                                         <p class="card__heading">
                                             Донецкая Юлия Валерьевна
                                         </p>
-                                        <p class="card__position">
-                                            к.т.н, профессор
-                                        </p>
                                         <p class="card__text">
-                                            "Санкт-Петербургский национальный исследовательский университет информационных технологий, механики и оптики"
+                                            ЗАО "Мурмансельдь 2"
                                         </p>
                                         <a href="#" class="card__file" download="">
                                             <svg class="card__file-svg">
                                                 <use xlink:href="#pdf"></use>
                                             </svg>
-                                            Диссертация.pdf (2 Мб)
+                                            Отзыв.pdf (2 Мб)
                                         </a>
                                     </div>
                                 </div>
@@ -271,137 +275,6 @@
                                             </svg>
                                             Диссертация.pdf (2 Мб)
                                         </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cell lg-12">
-                            <h3>Персональный состав диссовета</h3>
-                            <div class="grid">
-                                <div class="card cell lg-4 sm-6 xs-12">
-                                    <div class="card__wrap card__wrap--border card--100h">
-                                        <p class="card__heading">
-                                            Донецкая Юлия Валерьевна
-                                        </p>
-                                        <p class="card__position">
-                                            к.т.н, профессор
-                                        </p>
-                                        <p class="card__text">
-                                            "Санкт-Петербургский национальный исследовательский университет
-                                            информационных технологий, механики и оптики"
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card cell lg-4 sm-6 xs-12">
-                                    <div class="card__wrap card__wrap--border card--100h">
-                                        <p class="card__heading">
-                                            Донецкая Юлия Валерьевна
-                                        </p>
-                                        <p class="card__position">
-                                            к.т.н, профессор
-                                        </p>
-                                        <p class="card__text">
-                                            "Санкт-Петербургский национальный исследовательский университет
-                                            информационных технологий, механики и оптики"
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card cell lg-4 sm-6 xs-12">
-                                    <div class="card__wrap card__wrap--border card--100h">
-                                        <p class="card__heading">
-                                            Донецкая Юлия Валерьевна
-                                        </p>
-                                        <p class="card__position">
-                                            к.т.н, профессор
-                                        </p>
-                                        <p class="card__text">
-                                            "Санкт-Петербургский национальный исследовательский университет
-                                            информационных технологий, механики и оптики"
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card cell lg-4 sm-6 xs-12">
-                                    <div class="card__wrap card__wrap--border card--100h">
-                                        <p class="card__heading">
-                                            Донецкая Юлия Валерьевна
-                                        </p>
-                                        <p class="card__position">
-                                            к.т.н, профессор
-                                        </p>
-                                        <p class="card__text">
-                                            "Санкт-Петербургский национальный исследовательский университет
-                                            информационных технологий, механики и оптики"
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card cell lg-4 sm-6 xs-12">
-                                    <div class="card__wrap card__wrap--border card--100h">
-                                        <p class="card__heading">
-                                            Донецкая Юлия Валерьевна
-                                        </p>
-                                        <p class="card__position">
-                                            к.т.н, профессор
-                                        </p>
-                                        <p class="card__text">
-                                            "Санкт-Петербургский национальный исследовательский университет
-                                            информационных технологий, механики и оптики"
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card cell lg-4 sm-6 xs-12">
-                                    <div class="card__wrap card__wrap--border card--100h">
-                                        <p class="card__heading">
-                                            Донецкая Юлия Валерьевна
-                                        </p>
-                                        <p class="card__position">
-                                            к.т.н, профессор
-                                        </p>
-                                        <p class="card__text">
-                                            "Санкт-Петербургский национальный исследовательский университет
-                                            информационных технологий, механики и оптики"
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card cell lg-4 sm-6 xs-12">
-                                    <div class="card__wrap card__wrap--border card--100h">
-                                        <p class="card__heading">
-                                            Донецкая Юлия Валерьевна
-                                        </p>
-                                        <p class="card__position">
-                                            к.т.н, профессор
-                                        </p>
-                                        <p class="card__text">
-                                            "Санкт-Петербургский национальный исследовательский университет
-                                            информационных технологий, механики и оптики"
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card cell lg-4 sm-6 xs-12">
-                                    <div class="card__wrap card__wrap--border card--100h">
-                                        <p class="card__heading">
-                                            Донецкая Юлия Валерьевна
-                                        </p>
-                                        <p class="card__position">
-                                            к.т.н, профессор
-                                        </p>
-                                        <p class="card__text">
-                                            "Санкт-Петербургский национальный исследовательский университет
-                                            информационных технологий, механики и оптики"
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card cell lg-4 sm-6 xs-12">
-                                    <div class="card__wrap card__wrap--border card--100h">
-                                        <p class="card__heading">
-                                            Донецкая Юлия Валерьевна
-                                        </p>
-                                        <p class="card__position">
-                                            к.т.н, профессор
-                                        </p>
-                                        <p class="card__text">
-                                            "Санкт-Петербургский национальный исследовательский университет
-                                            информационных технологий, механики и оптики"
-                                        </p>
                                     </div>
                                 </div>
                             </div>
