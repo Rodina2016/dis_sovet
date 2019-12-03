@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         listTargetSelect.forEach(function (el, ind) {
            const currentAttr = $(el).attr('data-id-spec');
             $(el).prop("disabled", false);
-           if(currentAttr === attr) {
+           if(currentAttr != attr) {
                $(el).prop("disabled", true);
            }
         });
