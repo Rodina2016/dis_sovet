@@ -85,7 +85,7 @@
       flex-grow: 1;
       padding-bottom: 16px;
       letter-spacing: 0.0016px;
-      border-bottom: 1px solid map_get($palette, accent-main-light);
+      border-bottom: 1px solid map_get($palette, bg-dark);
     }
 
     &-date {

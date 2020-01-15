@@ -1,4 +1,5 @@
 .filters {
+  margin-bottom: 32px;
 
     & + .info-card {
       @include mq(md) {
@@ -6,10 +7,42 @@
       }
 
       @include mq(sm) {
-        margin-top: 32px;
+        margin-top: 40px;
       }
     }
+  .form-group {
+    margin-bottom: 30px;
 
+    @include mq(sm) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+
+    @include mq(md) {
+      position: relative;
+      padding: 14px 0;
+      text-align: center;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: url("../img/dotted.png");
+      }
+    }
+  }
+
+  &__wrap {
+    @include mq(md) {
+      padding-bottom: 1px;
+    }
+  }
 
   &__col {
     padding-right: 16px;
@@ -70,7 +103,6 @@
  &__close {
    padding-top: 25px;
    padding-bottom: 25px;
-   margin-bottom: 15px;
 
    @include mq(xs) {
      padding-top: 20px;

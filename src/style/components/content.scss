@@ -106,6 +106,7 @@
       flex-direction: column;
 
       @include mq(md) {
+        padding: 0;
         margin-bottom: 15px;
       }
 
@@ -216,7 +217,6 @@
   }
 
   &__col {
-
     &-row {
       margin-bottom: 10px;
 
@@ -267,8 +267,9 @@
       &--row {
         flex-direction: row;
 
-        @include mq(xs) {
-          padding: 24px 0;
+        @include mq(md) {
+          margin-bottom: 16px;
+          padding: 0 16px;
         }
       }
     }

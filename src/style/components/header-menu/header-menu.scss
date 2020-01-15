@@ -1,6 +1,6 @@
 .header-menu {
   position: relative;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+ border-bottom: 1px solid map_get($palette, bg-dark);
 
   &.active {
     display: block;
@@ -38,7 +38,7 @@
       margin-right: 45px;
       padding-bottom: 12px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 400;
       letter-spacing: 0.3px;
 
       @include mq(md) {
@@ -62,7 +62,7 @@
         @include pseudo-element('');
         bottom: 0;
         width: 0%;
-        height: 4px;
+        height: 2px;
         border-radius: 60px;
         background-color: map_get($palette, accent-second);
       }

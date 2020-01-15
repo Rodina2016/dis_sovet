@@ -1,10 +1,13 @@
 .breadscrumbs {
-  margin-bottom: 56px;
+  margin-top: 32px;
   color: map_get($palette, content-light);
   font-size: 14px;
 
+  @include mq(md) {
+    margin-top: 16px;
+  }
+
   @include mq(xs) {
-    margin-bottom: 32px;
     font-size: 10px;
     line-height: 16px;
   }

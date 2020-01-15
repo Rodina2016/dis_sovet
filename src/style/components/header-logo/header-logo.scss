@@ -1,12 +1,7 @@
 .header {
-  margin-bottom: 32px;
   position: relative;
   background-color: map_get($palette, bg);
   z-index: 2;
-
-  @include mq(xs) {
-    margin-bottom: 16px;
-  }
 
   &__burger {
     display: block;

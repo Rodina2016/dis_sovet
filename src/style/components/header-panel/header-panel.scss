@@ -12,9 +12,35 @@
     }
   }
 
+  &__kebab {
+    margin-left: 8px;
+    order: 1;
+
+    &-svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
   &__lang {
     font-size: 12px;
     font-weight: map_get($font, semi-bold-weight);
+
+    @include mq(xs) {
+      position: absolute;
+      top: 48px;
+      padding: 8px 16px;
+      background-color: map_get($palette, bg-dark);
+      border-radius: 4px;
+      z-index: 1;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    &.active {
+      display: block;
+    }
+
     &-icon {
       margin-left: 8px;
       width: 24px;

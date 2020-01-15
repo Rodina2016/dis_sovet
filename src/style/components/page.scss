@@ -20,9 +20,11 @@ h6 {
 
 h1 {
   font-size: 40px;
+  margin-top: 64px;
   margin-bottom: 33px;
 
   @include mq(md) {
+    margin-top: 52px;
     margin-bottom: 25px;
   }
 
@@ -31,6 +33,7 @@ h1 {
   }
 
   @include mq(xs) {
+    margin-top: 40px;
     font-size: 24px;
   }
 
@@ -158,9 +161,12 @@ img {
   max-width: 100%;
 }
 
+.fs-14 {
+  font-size: 14px;
+}
+
 .sm-order-1 {
   @include mq(sm) {
     order: 1;
   }
-
 }

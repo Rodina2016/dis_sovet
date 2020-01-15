@@ -226,4 +226,10 @@ document.addEventListener('DOMContentLoaded', function () {
             $(this).removeClass('show');
         }
     });
+
+    /*kebab menu*/
+
+    $(document).on('click', '#kebab', function () {
+        $(this).next('.header-panel__lang').toggleClass('active');
+    });
 });
