@@ -25,7 +25,12 @@
       margin-bottom: 30px;
     }
 
+    &--diplom {
+      padding-top: 0;
+    }
+
     &-heading {
+      margin-top: 0;
       margin-bottom: 1rem;
     }
 
@@ -72,22 +77,6 @@
           font-size: 16px;
         }
       }
-
-      &--min-h {
-        min-height: 80px;
-
-        @include mq(md) {
-          min-height: inherit;
-        }
-      }
-
-      &--min-h-big {
-        min-height: 1110px;
-
-        @include mq(md) {
-          min-height: inherit;
-        }
-      }
     }
 
     &-logo {
@@ -111,7 +100,6 @@
       }
 
       &--en {
-        @include mq(md) {
           display: none;
 
           &.hidden {
@@ -121,11 +109,9 @@
           &.show {
             display: flex;
           }
-        }
       }
 
       &--ru {
-        @include mq(md) {
           &.hidden {
             display: none;
           }
@@ -133,7 +119,6 @@
           &.show {
             display: flex;
           }
-        }
       }
 
       &--border {
@@ -182,21 +167,31 @@
   }
 
   &__lang {
-    @include mq(md) {
-      margin-top: 24px;
+      margin-top: 56px;
+      margin-bottom: 56px;
       display: block;
 
-      &-btn {
-        position: relative;
-        padding-left: 45px;
-        padding-right: 18px;
-        font-size: 18px;
-        border-color: rgba(35,36,115,.1);
+    @include mq(xs) {
+      margin: 32px 0 8px;
+    }
+
+    .content__lang-btn {
+      position: relative;
+      height: auto;
+      padding: 10px 23px 10px 50px;
+      font-size: 18px;
+      background-color: map_get($palette, bg-dark);
+      border-color: map_get($palette, bg-dark);
 
         &:active,
-        &:hover {
-          border-color: rgba(35,36,115,.1);
+        &:focus {
+          background-color: map_get($palette, bg-dark);
+          border-color: map_get($palette, bg-dark);
         }
+
+      &:hover {
+        background-color: map_get($palette, bg);
+      }
 
         @include mq(xs) {
           font-size: 14px;
@@ -209,11 +204,11 @@
 
       &-icon {
         position: absolute;
-        left: 8px;
+        left: 18px;
         width: 24px;
         height: 24px;
       }
-    }
+
   }
 
   &__col {
@@ -222,14 +217,6 @@
 
       &:last-child {
         margin-bottom: 0;
-      }
-
-      &--min-h {
-        min-height: 270px;
-
-        @include mq(md) {
-          min-height: inherit;
-        }
       }
 
       &--border {
@@ -257,6 +244,15 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      &--border {
+        padding: 32px 72px 24px;
+        border:2px solid map_get($palette, border-light);
+
+        @include mq(xs) {
+          padding: 24px 16px 16px;
+        }
       }
 
       &--bg {
